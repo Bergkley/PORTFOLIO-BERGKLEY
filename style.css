@@ -930,16 +930,20 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
+.loader-container {
+  display: flex;
+  margin-top: 2%;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+}
 .loader {
   border-radius: 50%;
   width: 40px;
   height: 40px;
   animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -1243,3 +1247,7 @@ input:checked + .slider:before {
   }
 }
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
