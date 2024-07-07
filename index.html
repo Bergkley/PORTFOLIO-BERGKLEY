@@ -497,16 +497,35 @@
         </div>
 
 
-        <div class="contact-form" >
-            <form action="">
-                <input type="" placeholder="Digite seu nome" required>
-                <input type="email" placeholder="Digite seu e-mail" required>
-
-                <input type="" placeholder="Digite seu assunto                ">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Digite sua mensagem" required></textarea>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Digite seu nome" required>
+                <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                <input type="text" name="_subject" placeholder="Digite seu assunto">
+                <textarea name="message" cols="40" rows="10" placeholder="Digite sua mensagem" required></textarea>
+                <input type="hidden" name="_captcha" value="false">
                 <input type="submit" value="enviar" class="send">
             </form>
         </div>
+        <div id="loadingMessage" class="modalsucess">
+            <div class="modal-content-sucess">
+                <p style="color: #181717;">Enviando e-mail...</p>
+                <div class="loader"></div>
+            </div>
+        </div>
+        <div id="successMessage" class="modalsucess">
+            <div class="modal-content-sucess">
+                <span class="close-button">&times;</span>
+                <p>E-mail enviado com sucesso!</p>
+            </div>
+        </div>
+        <div id="errorMessage" class="modalsucess">
+            <div class="modal-content-sucess">
+                <span class="close-button">&times;</span>
+                <p style="color: red;">Falha ao enviar e-mail. Por favor, tente novamente mais tarde.</p>
+            </div>
+        </div>
+        
     </section>
     <div class="last-text">
         <p>&#169

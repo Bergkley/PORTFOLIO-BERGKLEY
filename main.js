@@ -59,7 +59,6 @@ var typed = new Typed(".text", {
   themeToggle.addEventListener('click', function() {
       body.classList.toggle('dark-theme');
       
-      // Atualizar ícones com base no tema atual
       const isDarkMode = body.classList.contains('dark-theme');
       if (isDarkMode) {
           sunIcon.style.display = 'inline-block';
@@ -205,20 +204,18 @@ var typed = new Typed(".text", {
           
           document.getElementById('current-language').innerHTML = `<img src="${selectedLanguage.icon}" alt="${selectedLanguage.text}" class="flag-icon"> ${selectedLanguage.text}`;
           
-          // Redireciona para a página correta
           window.location.href = selectedLanguage.href;
       });
   });
   
   
   
-  
+  // CARDS
   document.addEventListener('DOMContentLoaded', function () {
       const showMoreButton = document.getElementById('showMoreButton');
       const allCards = document.querySelectorAll('.card');
       const maxCardsToShow = 3;
       
-      // Esconder todos os cards que estão além do máximo inicialmente
       allCards.forEach((card, index) => {
           if (index >= maxCardsToShow) {
               card.style.display = 'none';
@@ -236,4 +233,74 @@ var typed = new Typed(".text", {
       });
   });
   
+
+  // FORM
   
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const formData = new FormData(this);
+
+    showLoadingModal();
+
+    fetch('https://formsubmit.co/bergkley@gmail.com', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'text/html'
+        }
+    }).then(response => response.text())
+    .then(data => {
+        hideLoadingModal();
+        showSuccessModal();
+    }).catch(error => {
+        hideLoadingModal();
+        showErrorModal();
+        console.error('Erro:', error);
+    });
+});
+
+function showLoadingModal() {
+    const modal = document.getElementById('loadingMessage');
+    modal.style.display = 'flex';
+}
+
+function hideLoadingModal() {
+    const modal = document.getElementById('loadingMessage');
+    modal.style.display = 'none';
+}
+
+function showSuccessModal() {
+    const modal = document.getElementById('successMessage');
+    const closeButton = modal.querySelector('.close-button');
+    
+    modal.style.display = 'flex';
+    
+    closeButton.onclick = function() {
+        modal.style.display = 'none';
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+}
+
+function showErrorModal() {
+    const modal = document.getElementById('errorMessage');
+    const closeButton = modal.querySelector('.close-button');
+    
+    modal.style.display = 'flex';
+    
+    closeButton.onclick = function() {
+        modal.style.display = 'none';
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+}
+
