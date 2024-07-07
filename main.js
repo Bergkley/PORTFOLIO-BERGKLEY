@@ -238,7 +238,6 @@ var typed = new Typed(".text", {
   
   document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
-
     const formData = new FormData(this);
 
     showLoadingModal();
@@ -253,10 +252,12 @@ var typed = new Typed(".text", {
     .then(data => {
         hideLoadingModal();
         showSuccessModal();
+        resetForm(); 
     }).catch(error => {
         hideLoadingModal();
         showErrorModal();
         console.error('Erro:', error);
+        resetForm(); 
     });
 });
 
@@ -304,3 +305,6 @@ function showErrorModal() {
     }
 }
 
+function resetForm() {
+    document.getElementById('contactForm').reset();
+}
