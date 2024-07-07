@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
+    rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-sOMfK+1AxQUpG/tTRlZl+5HmzoXWBRF+M6nZJzBrIuXW6GkLx14Ou5e6D+P2sUvF5L+NTdUpQNBgYJ1otne8QA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><span style="color: blueviolet;">< </span>Bergkley <span style="color: blueviolet;">/></span></a>
+    
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active"><i class='bx bx-home'></i>Página de inicio</a>
+            <a href="#about" style="--i:2"><i class='bx bx-user'></i>Acerca de</a>
+            <a href="#services" style="--i:3"><i class='bx bxs-briefcase' ></i>Servicios</a>
+            <a href="#skill" style="--i:3"><i class='bx bxs-bulb'></i>Habilidades</a>
+            <a href="#portfolio" style="--i:4"><i class='bx bx-grid-alt'></i>Portafolio</a>
+            <a href="#contact" style="--i:5"><i class='bx bx-comment'></i>Contacto</a>
+            <a href="#" style="--i:6">|</a>
+            <label class="mode-color">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round">
+                    <i class="bx bxs-sun" style="color: orange;"></i>
+                    <i class="bx bxs-moon" style="color: yellow;"></i>
+                </span>
+            </label>
+            
+            <div class="dropdown">
+                <button class="dropbtn" id="current-language"><img src="image/espanha.png" alt="Espanhol" class="flag-icon"> Español</button>
+                <div class="dropdown-content">
+                    <a href="index.html" id="pt-br"><img src="image/brasil.png" alt="Português (Brasil)" class="flag-icon"> Português (Brasil)</a>
+                    <a href="indexUs.html" id="en"><img src="image/estados-unidos.png" alt="English" class="flag-icon"> English</a>
+                    <a href="indexEs.html" id="es"><img src="image/espanha.png" alt="Español" class="flag-icon"> Español</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hola, mi nombre es👋</h3>
+            <h1>Bergkley Brasil</h1>
+            
+            <h3> y yo soy un
+            <span class="text"></span> </h3>
+            <hr color="blueviolet" style="margin-top: 10px;">
+           
+            
+            
+            <div style="margin-top: 50px;">
+                <a href="https://github.com/Bergkley" target="_blank" class="btn-box"><i class='bx bxl-github' style="color: blueviolet;"></i> GitHub</a>
+                <span style="margin: 0 10px;"></span> 
+                <a href="https://br.linkedin.com/in/bergkley-ferreira-brasil-008680245" target="_blank" class="btn-box"><i class='bx bxl-linkedin-square' style="color: blueviolet;" ></i> LinkedIn</a>
+            </div>          
+        </div>
+        <img src="image/output-onlinegiftools.gif"  id="gif" alt="Descrição da GIF">
+        
+    </section>
+
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="image/photo_pessoal 2.jpg" alt="">
+        </div>
+        <div class="about-text">
+            <h2>Sobre <span>mi</span></h2>
+            <h4>Full Stack Desarrollador</h4>
+            <p>Soy un estudiante de desarrollo full stack, apasionado por explorar tanto las complejidades del Front-End como del Back-End. Siempre estoy buscando aprender y aplicar nuevas tecnologías para crear soluciones innovadoras y funcionales.
+            </p>
+
+            <p>     
+                En Front-End tengo sólida experiencia en HTML, CSS y JavaScript, donde busco no sólo crear interfaces intuitivas y visualmente atractivas, sino también asegurar una experiencia de usuario excepcional.
+       
+                En el Back-End me he dedicado especialmente a Node.js, desarrollando habilidades en la construcción de APIs robustas y sistemas escalables. Mi trayectoria de desarrollo también incluye experiencia práctica con bases de datos como MySQL y MongoDB, y familiaridad con conceptos fundamentales de seguridad y rendimiento.
+            </p>
+            <p>
+                Siempre estoy abierto a explorar nuevos lenguajes y tecnologías, ya que creo en la importancia de ampliar constantemente mi repertorio para enfrentar nuevos desafíos y mantenerme actualizado en el dinámico campo del desarrollo de software.
+            </p>
+            <div class="tech-icons">
+                <div class="icon-wrapper">
+                    <i class='bx bxl-html5' style='color: #e34c26;'></i>
+                    <i class='bx bxl-css3' style='color: #1572b6;'></i>
+                    <i class='bx bxl-javascript' style='color: #f7df1e;'></i>
+                    <i class='bx bxl-react' style='color: #61dafb;'></i>
+                    <i class='bx bxl-nodejs' style='color: #68a063;'></i>
+                    <i class='bx bxl-typescript' style='color: #007acc;'></i>
+                    <i class='bx bxl-data' style='color: #336791;'></i>
+                    <i class='bx bxl-postgresql' style='color: #336791;'></i>
+                    <i class='bx bxl-mongodb' style='color: #4db33d;'></i>
+                    <i class='bx bxl-git' style='color: #f05032;'></i>
+                    <i class='bx bxl-github' style='color: #181717;'></i>
+                    <i class='bx bxl-gitlab' style='color: #fc6d26;'></i>
+                    <i class='bx bxl-java' style='color: #007396;'></i>
+                    
+                </div>
+            </div>
+            <a href="#" class="btn-box" id="btn-box-curriculo" style="margin-top: 50px;">Descargar mi CV</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-title">Mis <span>Servicios</span></h1>
+                <div class="services-list">
+                    <div>
+                        <i class='bx bx-code' style='color:#00eeff'></i>
+                        <h2>DESARROLLADOR FRONT-END</h2>
+                        <p>Como desarrollador front-end, es fundamental transformar el diseño en una interfaz interactiva y funcional. Utilizo tecnologías como HTML, CSS, JavaScript y React para crear experiencias de usuario receptivas y accesibles. Mi misión es garantizar que cada elemento visual de un sitio web o aplicación funcione de manera eficiente y atractiva.
+                        </p>
+                        
+                    </div>
+                    <div>
+                        <i class='bx bxs-component' style='color:#00eeff'></i>
+                        <h2>ANALISTA DE SISTEMAS</h2>
+                        <p>Como analista de sistemas, mi función es analizar y desarrollar soluciones tecnológicas que satisfagan las necesidades del negocio. Estoy involucrado en el modelado de datos, análisis de requisitos y diseño de sistemas, buscando siempre optimizar los procesos y asegurar la eficiencia de los sistemas implementados.
+                        </p>
+                    </div>
+                    <div>
+                        <i class='bx bx-server' style='color:#00eeff'></i>
+                        <h2>DESARROLLADOR BACK-END</h2>
+                        <p>Como desarrollador back-end, soy responsable de la lógica del servidor y la integración de la base de datos. Utilizo marcos como NodeJs para crear API sólidas y seguras, asegurando que los datos fluyan de manera eficiente entre el servidor y el usuario final.
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <h1 class="sub-title" id="skill">Mis <span>Habilidades</span></h1>
+    <div class="heading1">
+        <button class="filter-btn active" data-filter="all">TODO</button>
+        <button class="filter-btn" data-filter="backend">BACK-END</button>
+        <button class="filter-btn" data-filter="frontend">FRONT-END</button>
+        <button class="filter-btn" data-filter="personal">HABILIDAD PERSONAL</button>
+    </div>
+    <section class="skills" id="skills">
+        <div class="container2">
+            <div class="skills-list">
+                <div class="skill" data-category="frontend" >
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="85, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">85%</div>
+                    </div>
+                </div>
+                <div class="skill" data-category="frontend">
+                    <div class="skill-info">
+                        <span>React</span>
+                    </div>
+                    <div class="skill-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="75, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">75%</div>
+                    </div>
+                </div>
+                <div class="skill" data-category="backend">
+                    <div class="skill-info">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="80, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">80%</div>
+                    </div>
+                </div>
+                <div class="skill" data-category="backend">
+                    <div class="skill-info">
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="skill-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="75, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">75%</div>
+                    </div>
+                </div>
+                <!-- Soft Skills -->
+                <div class="skill"  data-category="personal">
+                    <div class="skill-info">
+                        <span>Comunicación</span>
+                    </div>
+                    <div class="skill-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="85, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">85%</div>
+                    </div>
+                </div>
+                <div class="skill"  data-category="personal">
+                    <div class="skill-info">
+                        <span>Creatividad</span>
+                    </div>
+                    <div class="skill-circle" >
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="85, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">85%</div>
+                    </div>
+                </div>
+                <div class="skill"  data-category="personal">
+                    <div class="skill-info">
+                        <span>Trabajo en equipo</span>
+                    </div>
+                    <div class="skill-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="100, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">100%</div>
+                    </div>
+                </div>
+                <div class="skill"  data-category="personal">
+                    <div class="skill-info">
+                        <span>Liderazgo</span>
+                    </div>
+                    <div class="skill-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="90, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">90%</div>
+                    </div>
+                </div>
+                <div class="skill"  data-category="personal">
+                    <div class="skill-info">
+                        <span>Solución de problemas</span>
+                    </div>
+                    <div class="skill-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="85, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">85%</div>
+                    </div>
+                </div>
+                <div class="skill"  data-category="personal">
+                    <div class="skill-info">
+                        <span>Organización</span>
+                    </div>
+                    <div class="skill-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                stroke-dasharray="95, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="percentage">95%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section>
+        <div id="portfolio">
+            <div class="main-text" id="project">
+                <h2>Mis  <span>proyectos</span></h2>
+                <div id="portfolio-buttons" class="collapse-buttons">
+                    <button class="portfolio-filter-btn active" data-filter="all">TODO</button>
+                    <button class="portfolio-filter-btn" data-filter="backend">BACK-END</button>
+                    <button class="portfolio-filter-btn" data-filter="frontend">FRONT-END</button>
+                    <button class="portfolio-filter-btn" data-filter="backend&frontend">BACK-END & FRONT-END</button>
+                </div>
+                <div class="portfolio-content">
+                    <div class="card" data-category="frontend">
+                        <img src="image/Instituto ONG 1.png" style="width: 103%; ;" alt="Project 1">
+                        <hr>
+                        <p>PROYECTO SOCIAL</p>
+                        <button class="show-details-btn" data-modal="modal1">Mas informaciones
+                        </button>
+                    </div>
+                    <div class="card" data-category="frontend">
+                        <img src="image/Portfolio.png" style="width: 170%;" alt="Project 2">
+                        <hr>
+                        <p>PORTAFOLIO</p>
+                        <button class="show-details-btn" data-modal="modal2"> Mas informaciones</button>
+                    </div>
+                    <div class="card" data-category="backend&frontend">
+                        <img src="image/projeto canil.png"  calt="Project 3">
+                        <hr>
+                        <p>PROYECTO CANIL</p>
+                        <button class="show-details-btn" data-modal="modal3">Mas informaciones</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="show-more-btn" id="showMoreButton">Mostrar más proyectos</button>
+    </section>
+    
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>PROYECTO SOCIAL</h2>
+            <img src="image/Instituto ONG.png" style="margin-top: 1%;" alt="Project 1">
+            <a href="https://github.com/Bergkley/projeto-social---vers-o-BETA" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Codigo fuente</a>
+            <hr class="small-hr">
+
+            <!-- Descrição -->
+            <h4 style="margin-top: 1%;">Descripción</h4>
+            <p style="text-align: justify; text-align-last: center;">
+                El proyecto social fue creado para el Instituto Doando o que seReceive, desarrollado por estudiantes de la EEEP Juárez Távora, en la carrera de Redes de Computadores en el año 2023. El proyecto consistió en crear un sitio web para ayudar a la institución a presentar su misión y actividades, además de ofrecer Canales de donación integrados en el sitio web.
+            </p>
+            <hr class="small-hr">
+            <h4 style="margin-top: 1%;">Tecnologías utilizadas</h4>
+            <div class="tags">
+                <span class="tag html"><i class='bx bxl-html5'></i> HTML5</span>
+                <span class="tag css"><i class='bx bxl-css3'></i> CSS3</span>
+                <span class="tag javascript"><i class='bx bxl-javascript'></i> JavaScript</span>
+            </div>
+            <hr class="small-hr">
+            <a href="https://instituto-doando-que-se-recebe.netlify.app/" target="_blank" class="btn-box-modal">Proyecto de acceso                <i class='bx bx-link-external'></i></a>
+        </div>
+    </div>
+    
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>PORTAFOLIO</h2>
+        <img src="image/Portfolio.png" style="margin-top: 1%;" alt="Project 1">
+        <a href="#" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Codigo fuente</a>
+        <hr class="small-hr">
+
+        <!-- Descrição -->
+        <h4>Descripción</h4>
+        <p style="text-align: justify; text-align-last: center;">
+            Creación de un portafolio propio: desarrollo de un espacio digital estructurado y dinámico para la presentación de proyectos personales y profesionales, destacando las habilidades técnicas y creativas en diseño y desarrollo web. Implementación de apartados detallados de servicios ofrecidos, habilidades técnicas y personales.
+        </p>
+
+        <hr class="small-hr">
+        <h4>Tecnologías utilizadas</h4>
+        <div class="tags">
+            <span class="tag html"><i class='bx bxl-html5'></i> HTML5</span>
+            <span class="tag css"><i class='bx bxl-css3'></i> CSS3</span>
+            <span class="tag javascript"><i class='bx bxl-javascript'></i> JavaScript</span>
+            <hr class="small-hr">
+            <a href="#" class="btn-box-modal">Proyecto de acceso<i class='bx bx-link-external'></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>PROYECTO CANIL</h2>
+        <img src="image/projeto canil.png"  style="margin-top: 1%;" alt="Project 1">
+        <a href="https://github.com/Bergkley/CURSOS/tree/master/B7WEB/NodeJs/M%C3%B3dulo%202" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Codigo fuente</a>
+        <hr class="small-hr">
+
+        <!-- Descrição -->
+        <h4 style="margin-top: 1%;">Descripción</h4>
+        <p style="text-align: justify; text-align-last: center;">
+            El proyecto de la perrera se desarrolló a través del curso B7web, brindando una oportunidad práctica para aprender Node.js, TypeScript, HTML y CSS. Este proyecto te permite aplicar directamente los conocimientos adquiridos en el curso, explorando técnicas avanzadas de desarrollo web y reforzando habilidades esenciales en la creación y mantenimiento de aplicaciones modernas.
+        </p>
+        
+
+        <hr class="small-hr">
+        <h4>Tecnologías Utilizadas</h4>
+        <div class="tags">
+            <span class="tag html"><i class='bx bxl-html5'></i> HTML5</span>
+            <span class="tag css"><i class='bx bxl-css3'></i> CSS3</span>
+            <span class="tag javascript"><i class='bx bxl-javascript'></i> JavaScript</span>
+            <span class="tag nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
+            <span class="tag typescript"><i class='bx bxl-typescript'></i> TypeScript</span>
+        </div>
+
+        <hr class="small-hr">
+
+    </div>
+</div>
+
+    
+
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contacto <span>Mi</span></h2>
+            <div class="contact-list">
+                <li><i class='bx bxs-send'></i>bergkley@gmail.com</li>
+                <li><i class='bx bxs-phone'></i>+55(85) 98644-2147</li>
+            </div>
+            <div class="contact-icons">
+                <a href="https://github.com/Bergkley" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/bergkley?igsh=MWk2ZTE4a2FyeTczZA%3D%3D" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://br.linkedin.com/in/bergkley-ferreira-brasil-008680245" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+
+
+        <div class="contact-form" >
+            <form action="">
+                <input type="" placeholder="Introduzca su nombre" required>
+                <input type="email" placeholder="Escribe tu correo electrónico" required>
+
+                <input type="" placeholder="Ingresa tu tema">
+                <textarea name="" id="" cols="40" rows="10" placeholder="Escribe tu mensaje" required></textarea>
+                <input type="submit" value="mandar" class="send">
+            </form>
+        </div>
+    </section>
+    <div class="last-text">
+        <p>&#169
+            Bergkley Ferreira Brasil
+            2024 todos los derechos reservados
+        </p>
+    </div>
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+
+    
+    <script src="main.js"></script>
+    
+</body>
+</html>
