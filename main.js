@@ -308,3 +308,23 @@ function showErrorModal() {
 function resetForm() {
     document.getElementById('contactForm').reset();
 }
+
+// Função para gerar cor aleatória em formato hexadecimal
+function getRandomColor() {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  }
+  
+  const loaders = document.querySelectorAll('.loader');
+  
+  loaders.forEach(loader => {
+    const color1 = getRandomColor();
+    const color2 = getRandomColor();
+    const color3 = getRandomColor();
+    const color4 = getRandomColor();
+  
+    loader.style.border = `4px solid ${color1}`;
+    loader.style.borderTop = `4px solid ${color2}`;
+    loader.style.borderRight = `4px solid ${color3}`;
+    loader.style.borderBottom = `4px solid ${color4}`;
+  });
+  

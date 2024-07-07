@@ -500,14 +500,33 @@
 
 
         <div class="contact-form" >
-            <form action="">
-                <input type="" placeholder="Introduzca su nombre" required>
-                <input type="email" placeholder="Escribe tu correo electrónico" required>
+            <form id="contactForm">
+                <input type="text"  name="name" placeholder="Introduzca su nombre" required>
+                <input type="email" name="email" placeholder="Escribe tu correo electrónico" required>
 
-                <input type="" placeholder="Ingresa tu tema">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Escribe tu mensaje" required></textarea>
+                <input type="text" name="subject" placeholder="Ingresa tu tema">
+                <textarea name="message" id="" cols="40" rows="10" placeholder="Escribe tu mensaje" required></textarea>
+                <input type="hidden" name="_captcha" value="false">
                 <input type="submit" value="mandar" class="send">
             </form>
+        </div>
+        <div id="loadingMessage" class="modalsucess">
+            <div class="modal-content-sucess">
+                <p style="color: #181717;">Enviando correo electrónico...</p>
+                <div class="loader"></div>
+            </div>
+        </div>
+        <div id="successMessage" class="modalsucess">
+            <div class="modal-content-sucess">
+                <span class="close-button">&times;</span>
+                <p>¡Email enviado con éxito!</p>
+            </div>
+        </div>
+        <div id="errorMessage" class="modalsucess">
+            <div class="modal-content-sucess">
+                <span class="close-button">&times;</span>
+                <p style="color: red;">No se pudo enviar el correo electrónico. Por favor, inténtelo de nuevo más tarde.</p>
+            </div>
         </div>
     </section>
     <div class="last-text">

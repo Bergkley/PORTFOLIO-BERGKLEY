@@ -506,14 +506,33 @@
 
 
         <div class="contact-form" >
-            <form action="">
-                <input type="" placeholder="Enter Your Name" required>
-                <input type="email" placeholder="Enter Your Email" required>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
 
-                <input type="" placeholder="Enter Your SubJect">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <input type="text" name="_subject" placeholder="Enter Your SubJect">
+                <textarea name="message" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <input type="hidden" name="_captcha" value="false">
                 <input type="submit" value="submit" class="send">
             </form>
+        </div>
+        <div id="loadingMessage" class="modalsucess">
+            <div class="modal-content-sucess">
+                <p style="color: #181717;">Sending email...</p>
+                <div class="loader"></div>
+            </div>
+        </div>
+        <div id="successMessage" class="modalsucess">
+            <div class="modal-content-sucess">
+                <span class="close-button">&times;</span>
+                <p>Email successfully sent!</p>
+            </div>
+        </div>
+        <div id="errorMessage" class="modalsucess">
+            <div class="modal-content-sucess">
+                <span class="close-button">&times;</span>
+                <p style="color: red;">Error when sending email. Please try again later.</p>
+            </div>
         </div>
     </section>
     <div class="last-text">
