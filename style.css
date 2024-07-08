@@ -752,7 +752,7 @@ input:checked + .slider:before {
 
 .show-more-btn {
   padding: 20px 20px;
-  margin: 0 auto; /* Isso centraliza horizontalmente */
+  margin: 0 auto; 
   border: 2px solid #1572b6;
   background-color: transparent;
   color: #0ef;
@@ -762,9 +762,9 @@ input:checked + .slider:before {
   transition: all 0.3s ease;
   box-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet;
   
-  display: flex; /* Usando flexbox */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .show-more-btn:hover {
@@ -782,7 +782,7 @@ input:checked + .slider:before {
   align-items: center;
   gap: 3rem;
   padding-left: 30px;
-  margin-top: 130px;
+  margin-top: 240px;
 }
 .contact-text h2 {
   font-size: 90px;
