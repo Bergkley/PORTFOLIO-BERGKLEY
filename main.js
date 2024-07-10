@@ -328,3 +328,7 @@ function getRandomColor() {
     loader.style.borderBottom = `4px solid ${color4}`;
   });
   
+// #NAV-BAR MOBILE
+document.getElementById('hamburger').addEventListener('click', function () {
+    document.querySelector('.navbar').classList.toggle('open');
+});
