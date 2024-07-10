@@ -259,7 +259,7 @@ input:checked + .slider:before {
   top: 1rem;
   right: 1rem;
   font-size: 2rem;
-  color: #333;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -1210,6 +1210,10 @@ input:checked + .slider:before {
   .navbar.open .hamburger {
     display: none !important;
     margin-top: 1%;
+  }
+  .navbar.open .close-btn {
+    display: flex;
+    top: -6%;
   }
 }
 
