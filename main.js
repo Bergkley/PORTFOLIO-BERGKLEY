@@ -344,4 +344,11 @@ document.addEventListener('click', function(event) {
     if (isNavbarOpen && event.target !== hamburger && !navbar.contains(event.target)) {
         navbar.classList.remove('open');
     }
+    var navbarLinks = document.querySelectorAll('.navbar a');
+    navbarLinks.forEach(function(link) {
+        if (event.target === link) {
+            navbar.classList.remove('open');
+        }
+    });
 });
+
