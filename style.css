@@ -1089,7 +1089,7 @@ input:checked + .slider:before {
     padding: 20px 3%;
   }
   #gif{
-    height: 30%;
+    height: 20%;
   }
 
   .navbar a {
@@ -1114,17 +1114,25 @@ input:checked + .slider:before {
     font-size: 12px;
   }
 
-  .about-text h2 {
+  .about-text {
+    text-align: center;
+}
+
+.about-text h2 {
     font-size: 36px;
-  }
+}
 
-  .about-text h4 {
+.about-text h4 {
     font-size: 20px;
-  }
+}
 
-  .about-text p {
-    font-size: 16px;
-  }
+.about-text p {
+    font-size: 12px;
+    margin: 1 auto; 
+    display: block; 
+    text-align: justify;
+}
+
 
   .sub-title {
     font-size: 36px;
@@ -1218,7 +1226,8 @@ input:checked + .slider:before {
   }
   .navbar.open .close-btn {
     display: flex;
-    top: -6%;
+    top: -4%;
+    font-size: 25px;
   }
   .hamburger {
     display: flex;
@@ -1234,6 +1243,11 @@ input:checked + .slider:before {
     margin: 4px;
     border-radius: 2px;
   }
+  .tech-icons{
+    display: none;
+  }
+  
+
 }
 
 
