@@ -251,6 +251,18 @@ input:checked + .slider:before {
   margin: 4px;
   border-radius: 2px;
 }
+.close-btn{
+  display: none;
+  border: transparent;
+  background: transparent;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
 
 
 /* HOME */
