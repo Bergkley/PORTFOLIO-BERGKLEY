@@ -335,3 +335,13 @@ document.getElementById('hamburger').addEventListener('click', function () {
 document.getElementById('close-btn').addEventListener('click', function () {
     document.querySelector('.navbar').classList.remove('open');
 });
+
+document.addEventListener('click', function(event) {
+    var navbar = document.querySelector('.navbar');
+    var hamburger = document.getElementById('hamburger');
+    var isNavbarOpen = navbar.classList.contains('open');
+    
+    if (isNavbarOpen && event.target !== hamburger && !navbar.contains(event.target)) {
+        navbar.classList.remove('open');
+    }
+});
