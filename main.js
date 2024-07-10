@@ -332,3 +332,6 @@ function getRandomColor() {
 document.getElementById('hamburger').addEventListener('click', function () {
     document.querySelector('.navbar').classList.toggle('open');
 });
+document.getElementById('close-btn').addEventListener('click', function () {
+    document.querySelector('.navbar').classList.remove('open');
+});
