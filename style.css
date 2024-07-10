@@ -1205,7 +1205,10 @@ input:checked + .slider:before {
     left: 43%;
   }
   .navbar.open .dropdown {
-    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45%;
   }
   .navbar.open .hamburger {
     display: none !important;
