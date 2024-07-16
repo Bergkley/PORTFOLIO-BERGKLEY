@@ -58,7 +58,6 @@ body.dark-theme {
   color: #efff;
   text-decoration: none;
   font-weight: 600;
-  cursor: default;
   opacity: 0;
   cursor: pointer;
   animation: slideRight 1s ease forwards;
