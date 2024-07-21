@@ -209,55 +209,51 @@ var typed = new Typed(".text", {
   });
   
   
-  
-  // CARDS
+  //CARD
   document.addEventListener('DOMContentLoaded', function () {
-      const showMoreButton = document.getElementById('showMoreButton');
-      const allCards = document.querySelectorAll('.card');
-      const maxCardsToShow = 3;
-      
-      allCards.forEach((card, index) => {
-          if (index >= maxCardsToShow) {
-              card.style.display = 'none';
-          }
-      });
-  
-      showMoreButton.addEventListener('click', function () {
-          let cardsToShow = 0;
-          allCards.forEach((card, index) => {
-              if (card.style.display === 'none' && cardsToShow < maxCardsToShow) {
-                  card.style.display = 'block';
-                  cardsToShow++;
-              }
-          });        
-      });
-  });
-  
+    const showMoreButton = document.getElementById('showMoreButton');
+    const allCards = document.querySelectorAll('.card');
+    const maxCardsToShow = 3;
 
-  // FORM
-  
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    const formData = new FormData(this);
+    function applyCardLimit() {
+        allCards.forEach((card, index) => {
+            if (index < maxCardsToShow) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
 
-    showLoadingModal();
+    applyCardLimit();
 
-    fetch('https://formsubmit.co/bergkley@gmail.com', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'text/html'
-        }
-    }).then(response => response.text())
-    .then(data => {
-        hideLoadingModal();
-        showSuccessModal();
-        resetForm(); 
-    }).catch(error => {
-        hideLoadingModal();
-        showErrorModal();
-        console.error('Erro:', error);
-        resetForm(); 
+    showMoreButton.addEventListener('click', function () {
+        let cardsToShow = 0;
+        allCards.forEach((card, index) => {
+            if (card.style.display === 'none' && cardsToShow < maxCardsToShow) {
+                card.style.display = 'block';
+                cardsToShow++;
+            }
+        });
+    });
+
+    const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const filter = this.getAttribute('data-filter');
+
+            allCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (filter === 'all') {
+                applyCardLimit();
+            }
+        });
     });
 });
 
@@ -352,3 +348,28 @@ document.addEventListener('click', function(event) {
     });
 });
 
+
+// main.js
+document.addEventListener('DOMContentLoaded', function () {
+    const elements = document.querySelectorAll('#animate-on-scroll');
+
+    function checkVisibility() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            if (rect.top < windowHeight && rect.bottom >= 0) {
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
+    }
+
+    // Check visibility on scroll and load
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
+
+    // Initial check in case elements are already in view
+    checkVisibility();
+});
