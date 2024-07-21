@@ -50,7 +50,7 @@
     </header>
     
     <section class="home" id="home">
-        <div class="home-content">
+        <div class="home-content" id="animate-on-scroll">
             <h3>Hola, mi nombre es👋</h3>
             <h1>Bergkley Brasil</h1>
             
@@ -66,31 +66,33 @@
                 <a href="https://br.linkedin.com/in/bergkley-ferreira-brasil-008680245" target="_blank" class="btn-box"><i class='bx bxl-linkedin-square' style="color: blueviolet;" ></i> LinkedIn</a>
             </div>          
         </div>
-        <img src="image/output-onlinegiftools.gif"  id="gif" alt="Descrição da GIF">
+        <div id="animate-on-scroll">
+            <img src="image/output-onlinegiftools.gif"  id="gif" alt="Descrição da GIF">
+        </div>
         
     </section>
 
 
     <section class="about" id="about">
-        <div class="about-img">
+        <div class="about-img" id="animate-on-scroll">
             <img src="image/photo perfil.png"  alt="">
         </div>
-        <div class="about-text">
-            <h2>Sobre <span>mi</span></h2>
-            <h4>Full Stack Desarrollador</h4>
-            <p>Soy un estudiante de desarrollo full stack, apasionado por explorar tanto las complejidades del Front-End como del Back-End. Siempre estoy buscando aprender y aplicar nuevas tecnologías para crear soluciones innovadoras y funcionales.
+        <div class="about-text" id="animate-on-scroll">
+            <h2 id="animate-on-scroll">Sobre <span>mi</span></h2>
+            <h4 id="animate-on-scroll">Full Stack Desarrollador</h4>
+            <p id="animate-on-scroll">Soy un estudiante de desarrollo full stack, apasionado por explorar tanto las complejidades del Front-End como del Back-End. Siempre estoy buscando aprender y aplicar nuevas tecnologías para crear soluciones innovadoras y funcionales.
             </p>
 
-            <p>     
+            <p id="animate-on-scroll">     
                 En Front-End tengo sólida experiencia en HTML, CSS y JavaScript, donde busco no sólo crear interfaces intuitivas y visualmente atractivas, sino también asegurar una experiencia de usuario excepcional.
        
                 En el Back-End me he dedicado especialmente a Node.js, desarrollando habilidades en la construcción de APIs robustas y sistemas escalables. Mi trayectoria de desarrollo también incluye experiencia práctica con bases de datos como MySQL y MongoDB, y familiaridad con conceptos fundamentales de seguridad y rendimiento.
             </p>
-            <p>
+            <p id="animate-on-scroll">
                 Siempre estoy abierto a explorar nuevos lenguajes y tecnologías, ya que creo en la importancia de ampliar constantemente mi repertorio para enfrentar nuevos desafíos y mantenerme actualizado en el dinámico campo del desarrollo de software.
             </p>
-            <div class="tech-icons">
-                <div class="icon-wrapper">
+            <div class="tech-icons" id="animate-on-scroll">
+                <div class="icon-wrapper" id="animate-on-scroll">
                     <i class='bx bxl-html5' style='color: #e34c26;'></i>
                     <i class='bx bxl-css3' style='color: #1572b6;'></i>
                     <i class='bx bxl-javascript' style='color: #f7df1e;'></i>
@@ -107,13 +109,15 @@
                     
                 </div>
             </div>
-            <a href="#" class="btn-box" id="btn-box-curriculo" style="margin-top: 50px;">Descargar mi CV</a>
+            <div id="animate-on-scroll">
+                <a href="#" class="btn-box" id="btn-box-curriculo" style="margin-top: 50px;">Descargar mi CV</a>
+            </div>
         </div>
     </section>
 
     <section>
         <div class="services" id="services">
-            <div class="container">
+            <div class="container" id="animate-on-scroll">
                 <h1 class="sub-title">Mis <span>Servicios</span></h1>
                 <div class="services-list">
                     <div>
@@ -140,14 +144,14 @@
         </div>
     </section>
     <h1 class="sub-title" id="skill">Mis <span>Habilidades</span></h1>
-    <div class="heading1">
+    <div class="heading1" id="animate-on-scroll">
         <button class="filter-btn active" data-filter="all">TODO</button>
         <button class="filter-btn" data-filter="backend">BACK-END</button>
         <button class="filter-btn" data-filter="frontend">FRONT-END</button>
         <button class="filter-btn" data-filter="personal">HABILIDAD PERSONAL</button>
     </div>
     <section class="skills" id="skills">
-        <div class="container2">
+        <div class="container2" id="animate-on-scroll">
             <div class="skills-list">
                 <div class="skill" data-category="frontend" >
                     <div class="skill-info">
@@ -365,60 +369,64 @@
     </section>
     
     
-    <section>
-        <div id="portfolio">
+    <section  id="animate-on-scroll">
+        <div id="portfolio" id="animate-on-scroll">
             <div class="main-text" id="project">
-                <h2>Mis  <span>proyectos</span></h2>
+                <h2>Mis <span>Proyectos</span></h2>
                 <div id="portfolio-buttons" class="collapse-buttons">
-                    <button class="portfolio-filter-btn active" data-filter="all">TODO</button>
+                    <button class="portfolio-filter-btn active" data-filter="all">TODOS</button>
                     <button class="portfolio-filter-btn" data-filter="backend">BACK-END</button>
                     <button class="portfolio-filter-btn" data-filter="frontend">FRONT-END</button>
                     <button class="portfolio-filter-btn" data-filter="backend&frontend" id="btn-backend-frontend">BACK-END & FRONT-END</button>
                 </div>
-                <div class="portfolio-content">
-                    <!-- Projeto 1 -->
+                <!-- Projeto 1 -->
+                <div class="portfolio-content" id="animate-on-scroll">
                     <div class="card" data-category="frontend">
                         <img src="image/Instituto ONG 1.png" style="width: 103%; ;" alt="Project 1">
                         <hr>
-                        <p>PROYECTO SOCIAL</p>
-                        <button class="show-details-btn" data-modal="modal1">Mas informaciones
-                        </button>
+                        <p>PROYECTO SOCIAL </p>
+                        <button class="show-details-btn" data-modal="modal1">Mas informaciones</button>
                     </div>
-                    <!-- Projeto 2 -->
-                    <div class="card" data-category="frontend">
+                     <!-- Projeto 2 -->
+                    <div class="card" data-category="frontend" id="animate-on-scroll">
                         <img src="image/Portfolio.png" style="width: 170%;" alt="Project 2">
                         <hr>
-                        <p>PORTAFOLIO</p>
-                        <button class="show-details-btn" data-modal="modal2"> Mas informaciones</button>
+                        <p>PORTFOLIO</p>
+                        <button class="show-details-btn" data-modal="modal2">Mas informaciones</button>
                     </div>
                     <!-- Projeto 3 -->
-                    <div class="card" data-category="backend&frontend">
+    
+                    <div class="card" data-category="backend&frontend" id="animate-on-scroll">
                         <img src="image/projeto canil.png"  calt="Project 3">
                         <hr>
                         <p>PROYECTO CANIL</p>
                         <button class="show-details-btn" data-modal="modal3">Mas informaciones</button>
                     </div>
+    
                     <!-- Projeto 4 -->
-                    <div class="card" data-category="backend&frontend">
+    
+                    <div class="card" data-category="backend&frontend" id="animate-on-scroll">
                         <img src="image/projeto next store.png"  style="height: 55%;" calt="Project 4">
                         <hr>
-                        <p>PROJETO Next-Commerce</p>
+                        <p>PROYECTO Next-Commerce</p>
                         <button class="show-details-btn" data-modal="modal4">Mas informaciones</button>
                     </div>
+    
                     <!-- Projeto 5 -->
-                    <div class="card" data-category="frontend">
+                    <div class="card" data-category="frontend" id="animate-on-scroll">
                         <img src="image/projeto filmes.png"  style="height: 55%;" calt="Project 4">
                         <hr>
-                        <p>PROJETO PELÍCULA</p>
+                        <p>PROYECTO Película</p>
                         <button class="show-details-btn" data-modal="modal5">Mas informaciones</button>
                     </div>
+    
                 </div>
             </div>
         </div>
         <button class="show-more-btn" id="showMoreButton">Mostrar más proyectos</button>
     </section>
     
-
+    
     <!-- Modal 1 -->
     <div id="modal1" class="modal">
         <div class="modal-content">
@@ -427,7 +435,7 @@
             <img src="image/Instituto ONG.png" style="margin-top: 1%;" alt="Project 1">
             <a href="https://github.com/Bergkley/projeto-social---vers-o-BETA" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Codigo fuente</a>
             <hr class="small-hr">
-
+    
             <!-- Descrição -->
             <h4 style="margin-top: 2%;">Descripción</h4>
             <p style="text-align: justify; text-align-last: center;">
@@ -441,26 +449,26 @@
                 <span class="tag javascript"><i class='bx bxl-javascript'></i> JavaScript</span>
             </div>
             <hr class="small-hr">
-            <a href="https://instituto-doando-que-se-recebe.netlify.app/" target="_blank" class="btn-box-modal">Proyecto de acceso                <i class='bx bx-link-external'></i></a>
+            <a href="https://instituto-doando-que-se-recebe.netlify.app/" target="_blank" class="btn-box-modal">Proyecto de acceso <i class='bx bx-link-external'></i></a>
         </div>
     </div>
     
-
-<!-- Modal 2 -->
-<div id="modal2" class="modal">
+    
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>PORTAFOLIO</h2>
+        <h2>PORTFOLIO</h2>
         <img src="image/Portfolio.png" style="margin-top: 1%;" alt="Project 2">
-        <a href="https://github.com/Bergkley/PORTFOLIO-BERGKLEY" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Codigo fuente</a>
+        <a href="https://github.com/Bergkley/PORTFOLIO-BERGKLEY" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Codigo fuente</a>
         <hr class="small-hr">
-
+    
         <!-- Descrição -->
         <h4 style="margin-top: 2%;">Descripción</h4>
         <p style="text-align: justify; text-align-last: center;">
             Creación de un portafolio propio: desarrollo de un espacio digital estructurado y dinámico para la presentación de proyectos personales y profesionales, destacando las habilidades técnicas y creativas en diseño y desarrollo web. Implementación de apartados detallados de servicios ofrecidos, habilidades técnicas y personales.
         </p>
-
+    
         <hr class="small-hr">
         <h4 style="margin-top: 2%;">Tecnologías utilizadas</h4>
         <div class="tags">
@@ -468,27 +476,27 @@
             <span class="tag css"><i class='bx bxl-css3'></i> CSS3</span>
             <span class="tag javascript"><i class='bx bxl-javascript'></i> JavaScript</span>
             <hr class="small-hr">
-            <a href="https://portfolio-bergkley.netlify.app/" target="_blank" class="btn-box-modal">Proyecto de acceso<i class='bx bx-link-external'></i></a>
+            <a href="https://portfolio-bergkley.netlify.app/" target="_blank" class="btn-box-modal">Proyecto de acceso <i class='bx bx-link-external'></i></a>
         </div>
     </div>
-</div>
-
-<!-- Modal 3 -->
-<div id="modal3" class="modal">
+    </div>
+    
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>PROYECTO CANIL</h2>
         <img src="image/projeto canil.png"  style="margin-top: 1%;" alt="Project 3">
         <a href="https://github.com/Bergkley/CURSOS/tree/master/B7WEB/NodeJs/M%C3%B3dulo%202" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Codigo fuente</a>
         <hr class="small-hr">
-
+    
         <!-- Descrição -->
         <h4 style="margin-top: 2%;">Descripción</h4>
         <p style="text-align: justify; text-align-last: center;">
             El proyecto de la perrera se desarrolló a través del curso B7web, brindando una oportunidad práctica para aprender Node.js, TypeScript, HTML y CSS. Este proyecto te permite aplicar directamente los conocimientos adquiridos en el curso, explorando técnicas avanzadas de desarrollo web y reforzando habilidades esenciales en la creación y mantenimiento de aplicaciones modernas.
         </p>
         
-
+    
         <hr class="small-hr">
         <h4 style="margin-top: 2%;">Tecnologías Utilizadas</h4>
         <div class="tags">
@@ -498,71 +506,74 @@
             <span class="tag nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
             <span class="tag typescript"><i class='bx bxl-typescript'></i> TypeScript</span>
         </div>
-
+    
         <hr class="small-hr">
-
+    
     </div>
-</div>
-
-<!-- Modal 4 -->
-<div id="modal4" class="modal">
+    </div>
+    
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>PROYECTO NEXT-COMMERCE</h2>
         <img src="image/projeto next store.png"  style="margin-top: 1%;" alt="Project 4">
         <a href="https://github.com/Bergkley/Next---Commerce" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Codigo fuente</a>
         <hr class="small-hr">
-
+    
         <!-- Descrição -->
         <h4 style="margin-top: 2%;">Descripción</h4>
         <p style="text-align: justify; text-align-last: center;">
             Este proyecto fue creado con el objetivo de aprender y aplicar en la práctica los conceptos de Next.js con React, Prisma, Tailwind, Clerk, TypeScript y Vercel Postgres.
         </p>
         
-
+    
         <hr class="small-hr">
-        <h4 style="margin-top: 2%;">Tecnologías Utilizadas</h4>
+        <h4 style="margin-top: 2%;">Tecnologias Utilizadas</h4>
         <div class="tags">
             <span class="tag typescript"><i class='bx bxl-typescript'></i> TypeScript</span>
             <span class="tag react"><i class='bx bxl-react'></i> React</span>            
         </div>
-
+    
         <hr class="small-hr">
             <a href="https://next-commerce-berg.netlify.app/" target="_blank "class="btn-box-modal">Proyecto de acceso <i class='bx bx-link-external'></i></a>
-
+    
     </div>
-<!-- Modal 5 -->
-<div id="modal5" class="modal">
+    </div>
+    
+    <!-- Modal 5 -->
+    <div id="modal5" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>PROYECTO PELÍCULA</h2>
         <img src="image/projeto filmes.png"  style="margin-top: 1%;" alt="Project 5">
         <a href="https://github.com/Bergkley/Projeto-Filmes" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Codigo fuente</a>
         <hr class="small-hr">
-
+    
         <!-- Descrição -->
         <h4 style="margin-top: 2%;">Descripción</h4>
         <p style="text-align: justify; text-align-last: center;">
             Este proyecto tiene como objetivo consumir la API de Movie Database (TMDb) para crear una aplicación web dinámica e interactiva que permita a los usuarios explorar información sobre películas. Usando React.
         </p>
         
-
+    
         <hr class="small-hr">
-        <h4 style="margin-top: 2%;">Tecnologías Utilizadas</h4>
+        <h4 style="margin-top: 2%;">Tecnologias Utilizadas</h4>
         <div class="tags">
             <span class="tag react"><i class='bx bxl-react'></i> React</span>            
         </div>
-
+    
         <hr class="small-hr">
             <a href="https://projetos-filmes-bergkley.netlify.app/" target="_blank "class="btn-box-modal">Proyecto de acceso <i class='bx bx-link-external'></i></a>
-
-    </div>
-
     
-
-
+    </div>
+    </div>
+    
+    
+    
+    
     <section class="contact" id="contact">
-        <div class="contact-text">
+        <div class="contact-text" id="animate-on-scroll">
             <h2>Contacto <span>Mi</span></h2>
             <div class="contact-list">
                 <li><i class='bx bxs-send'></i>bergkley@gmail.com</li>
@@ -574,17 +585,16 @@
                 <a href="https://br.linkedin.com/in/bergkley-ferreira-brasil-008680245" target="_blank"><i class='bx bxl-linkedin'></i></a>
             </div>
         </div>
-
-
-        <div class="contact-form" >
+    
+    
+        <div class="contact-form"  id="animate-on-scroll">
             <form id="contactForm">
-                <input type="text"  name="name" placeholder="Introduzca su nombre" required>
+                <input type="text" name="name" placeholder="Introduzca su nombre" required>
                 <input type="email" name="email" placeholder="Escribe tu correo electrónico" required>
-
-                <input type="text" name="subject" placeholder="Ingresa tu tema">
-                <textarea name="message" id="" cols="40" rows="10" placeholder="Escribe tu mensaje" required></textarea>
+                <input type="text" name="_subject" placeholder="Ingresa tu tema">
+                <textarea name="message" cols="40" rows="10" placeholder="Escribe tu mensaje" required></textarea>
                 <input type="hidden" name="_captcha" value="false">
-                <input type="submit" value="mandar" class="send">
+                <input type="submit" value="Mandar" class="send">
             </form>
         </div>
         <div id="loadingMessage" class="modalsucess">
@@ -607,15 +617,16 @@
                 <p style="color: red;">No se pudo enviar el correo electrónico. Por favor, inténtelo de nuevo más tarde.</p>
             </div>
         </div>
+        
     </section>
-    <div class="last-text">
+    <div class="last-text"  id="animate-on-scroll">
         <p>&#169
             Bergkley Ferreira Brasil
             2024 todos los derechos reservados
         </p>
     </div>
     <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
-
+    
     
     <script src="main.js"></script>
     
