@@ -214,11 +214,14 @@ var typed = new Typed(".text", {
     const showMoreButton = document.getElementById('showMoreButton');
     const allCards = document.querySelectorAll('.card');
     const maxCardsToShow = 3;
+    let activeFilter = 'all'; // Filtro ativo inicialmente
 
     function applyCardLimit() {
-        allCards.forEach((card, index) => {
-            if (index < maxCardsToShow) {
+        let count = 0;
+        allCards.forEach(card => {
+            if ((activeFilter === 'all' || card.getAttribute('data-category').includes(activeFilter)) && count < maxCardsToShow) {
                 card.style.display = 'block';
+                count++;
             } else {
                 card.style.display = 'none';
             }
@@ -228,11 +231,11 @@ var typed = new Typed(".text", {
     applyCardLimit();
 
     showMoreButton.addEventListener('click', function () {
-        let cardsToShow = 0;
-        allCards.forEach((card, index) => {
-            if (card.style.display === 'none' && cardsToShow < maxCardsToShow) {
+        let count = 0;
+        allCards.forEach(card => {
+            if (card.style.display === 'none' && (activeFilter === 'all' || card.getAttribute('data-category').includes(activeFilter)) && count < maxCardsToShow) {
                 card.style.display = 'block';
-                cardsToShow++;
+                count++;
             }
         });
     });
@@ -240,22 +243,25 @@ var typed = new Typed(".text", {
     const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
     filterButtons.forEach(button => {
         button.addEventListener('click', function () {
-            const filter = this.getAttribute('data-filter');
+            activeFilter = this.getAttribute('data-filter'); // Atualizar filtro ativo
 
+            let count = 0;
             allCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
-                    card.style.display = 'block';
+                if (activeFilter === 'all' || card.getAttribute('data-category').includes(activeFilter)) {
+                    if (count < maxCardsToShow) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                    count++;
                 } else {
                     card.style.display = 'none';
                 }
             });
-
-            if (filter === 'all') {
-                applyCardLimit();
-            }
         });
     });
 });
+
 
 function showLoadingModal() {
     const modal = document.getElementById('loadingMessage');
