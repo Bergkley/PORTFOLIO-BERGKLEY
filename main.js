@@ -10,6 +10,8 @@ var typed = new Typed(".text", {
     backDelay: 1000,
     loop: true,
   });
+
+  
   
   // ATIVAÇÃO DO MENU DE NAVEGACAO
   
@@ -45,6 +47,8 @@ var typed = new Typed(".text", {
     window.addEventListener('load', checkSectionInView);
     window.addEventListener('scroll', checkSectionInView);
   });
+  
+
   
   
   
