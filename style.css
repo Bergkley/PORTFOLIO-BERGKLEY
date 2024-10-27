@@ -506,6 +506,102 @@ input:checked + .slider:before {
   transform: translateY(-10px);
 }
 
+/* MY Trajectory */
+.trajectory {
+  max-width: 600px;
+  margin: 30px auto;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.trajectory-header {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+.trajectory-header div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+.timeline {
+  position: relative;
+  padding: 0px 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+  transform: translateX(-50%);
+}
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 30px 0px;
+  box-sizing: border-box;
+}
+
+.timeline-item-left {
+  text-align: right;
+  padding-right: 30px;
+  
+}
+
+.timeline-item-right {
+  text-align: left;
+  padding-left: 30px;
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 50%; 
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item p {
+  color: #6A0DAD;
+}
+
+.timeline-item-left::before {
+  right: -10px;
+}
+
+.timeline-item-right::before {
+  left: 0px;
+}
+
+.timeline-item .date {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.timeline-item-left .date {
+  right: 25px;
+}
+
+.timeline-item-right .date {
+  left: 10;
+}
+
+
 /* MY SKILLS */
 
 .heading1 {
