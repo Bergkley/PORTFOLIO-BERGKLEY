@@ -935,7 +935,7 @@ input:checked + .slider:before {
   animation: slideTop 0.5s ease forwards;
   animation-delay: 2s;
   box-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet;
-  position: relative; /* Para usar o ::after */
+  position: relative; 
 }
 
 .btn-box-modal::after {
@@ -948,7 +948,7 @@ input:checked + .slider:before {
   box-shadow: 0 0 5px #6A0DAD, 0 0 25px #6A0DAD, 0 0 50px #6A0DAD, 0 0 100px cyan, 0 0 200px cyan;
   transition: width 0.35s ease;
   border-radius: 10px;
-  z-index: 1; /* Para que o efeito fique atrás do texto */
+  z-index: 1; 
 }
 
 
