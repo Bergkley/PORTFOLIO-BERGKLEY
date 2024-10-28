@@ -91,6 +91,7 @@ var typed = new Typed(".text", {
   
   
   
+  
   // filtro do botão
   const filterButtons = document.querySelectorAll('.filter-btn');
   const skillsList = document.querySelector('.skills-list');
@@ -217,7 +218,7 @@ var typed = new Typed(".text", {
   document.addEventListener('DOMContentLoaded', function () {
     const showMoreButton = document.getElementById('showMoreButton');
     const allCards = document.querySelectorAll('.card');
-    const maxCardsToShow = 3;
+    const maxCardsToShow = 4;
     let activeFilter = 'all'; // Filtro ativo inicialmente
 
     function applyCardLimit() {
