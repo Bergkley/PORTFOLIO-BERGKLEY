@@ -744,23 +744,33 @@ input:checked + .slider:before {
 
 .portfolio-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  padding: 0 90px; 
+
 }
 
 .card {
   border: 5px solid transparent;
+  justify-content: space-between; 
+  height: 100%; 
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #012290f7;
   transition: transform 0.3s ease;
 }
 
+
+
 .card img {
-  width: 100%;
+  width: 100%;  
+  height: 300px; 
   display: block;
   border-radius: 8px 8px 0 0;
+  padding: 1%;
+  border: 1px solid blueviolet;
 }
+
 
 .card hr {
   margin: 0;
@@ -779,6 +789,7 @@ input:checked + .slider:before {
 .show-details-btn {
   width: 100%;
   padding: 10px;
+  margin-top: 10px;
   background-color: transparent;
   color: #0ef;
   border: none;
@@ -786,10 +797,37 @@ input:checked + .slider:before {
   outline: none;
   transition: background-color 0.3s ease;
   box-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: slideRight 0.5s ease forwards;
+  transform: translateX(-20px);
+}
+
+.show-details-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.show-details-btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  box-shadow: 0 0 5px #6A0DAD, 0 0 25px #6A0DAD, 0 0 50px #6A0DAD, 0 0 100px cyan, 0 0 200px cyan;
+  transition: width 0.35s ease;
+  z-index: 1;
 }
 
 .show-details-btn:hover {
   box-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet, 0 0 50px blueviolet, 0 0 100px blueviolet, 0 0 200px blueviolet;
+}
+
+.show-details-btn:hover::after {
+  width: 100%;
 }
 
 .card:hover {
@@ -806,6 +844,7 @@ input:checked + .slider:before {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
 }
 
 .modal-content {
@@ -820,6 +859,22 @@ input:checked + .slider:before {
   text-align: center;
 }
 
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content h4 {
+  margin-bottom: 10px;
+}
+
+.small-hr{
+  margin: 0 auto;
+  border: none;
+  height: 1px;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
 .close {
   position: absolute;
   top: 10px;
@@ -830,7 +885,7 @@ input:checked + .slider:before {
 }
 
 .close:hover {
-  color: #ccc;
+  color: #ff0808;
 }
 
 .modal-content img {
@@ -880,11 +935,28 @@ input:checked + .slider:before {
   animation: slideTop 0.5s ease forwards;
   animation-delay: 2s;
   box-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet;
+  position: relative; /* Para usar o ::after */
 }
 
-.btn-box-modal:hover {
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+.btn-box-modal::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  box-shadow: 0 0 5px #6A0DAD, 0 0 25px #6A0DAD, 0 0 50px #6A0DAD, 0 0 100px cyan, 0 0 200px cyan;
+  transition: width 0.35s ease;
+  border-radius: 10px;
+  z-index: 1; /* Para que o efeito fique atrás do texto */
 }
+
+
+
+.btn-box-modal:hover::after {
+  width: 100%;
+}
+
 
 .collapse-buttons {
   text-align: center;
