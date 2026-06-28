@@ -1,726 +1,400 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Portfólio de Bergkley Ferreira Brasil, desenvolvedor full stack com projetos em Front-End, Back-End, Node.js, React, TypeScript e bancos de dados.">
+    <meta name="author" content="Bergkley Ferreira Brasil">
+    <meta name="theme-color" content="#101114">
+    <meta property="og:title" content="Bergkley Ferreira Brasil | Desenvolvedor Full Stack">
+    <meta property="og:description" content="Projetos, habilidades e experiência em desenvolvimento web full stack.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="image/Portfolio.png">
+    <title>Bergkley Ferreira Brasil | Desenvolvedor Full Stack</title>
+    <link rel="icon" href="image/Logo.png" type="image/png">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
-    rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-sOMfK+1AxQUpG/tTRlZl+5HmzoXWBRF+M6nZJzBrIuXW6GkLx14Ou5e6D+P2sUvF5L+NTdUpQNBgYJ1otne8QA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="image/Logo.png" type="image/png" />
-
 </head>
 <body>
-    <header class="header">
-        <a href="index.html" class="logo"><span style="color: blueviolet;">< </span>Bergkley <span style="color: blueviolet;">/></span></a>
-        <nav class="navbar">
-            <a href="#home" style="--i:1" class="active"><i class='bx bx-home'></i>Página Inicial</a>
-            <a href="#about" style="--i:2"><i class='bx bx-user'></i>Sobre</a>
-            <a href="#trajectory" style="--i:7"><i class='bx bx-map'></i>Trajetoria</a>
-            <a href="#services" style="--i:4"><i class='bx bxs-briefcase' ></i>Serviços</a>
-            <a href="#skill" style="--i:5"><i class='bx bxs-bulb'></i>Habilidades</a>
-            <a href="#portfolio" style="--i:6"><i class='bx bx-grid-alt'></i>Projetos</a>
-            <a href="#contact" style="--i:7"><i class='bx bx-comment'></i>Contato</a>
-            <a href="#" style="--i:6">|</a>
-            <label class="mode-color">
-                <input type="checkbox" id="theme-toggle">
-                <span class="slider round">
-                    <i class="bx bxs-sun" style="color: orange;"></i>
-                    <i class="bx bxs-moon" style="color: yellow;"></i>
-                </span>
-            </label>
-            <div class="dropdown">
-                <button class="dropbtn" id="current-language"><img src="image/brasil.png" alt="Português (Brasil)" class="flag-icon"> Português</button>
-                <div class="dropdown-content">
-                    <a href="index.html" id="pt-br"><img src="image/brasil.png" alt="Português (Brasil)" class="flag-icon"> Português (Brasil)</a>
-                    <a href="indexUs.html" id="en"><img src="image/estados-unidos.png" alt="English" class="flag-icon"> English</a>
-                    <a href="indexEs.html" id="es"><img src="image/espanha.png" alt="Español" class="flag-icon"> Español</a>
+    <a class="skip-link" href="#main-content">Ir para o conteúdo principal</a>
+
+    <header class="site-header" aria-label="Cabeçalho do site">
+        <div class="header-shell">
+            <a href="#home" class="brand" aria-label="Bergkley Ferreira Brasil, voltar ao início">
+                <span class="brand__mark" aria-hidden="true">&lt;/&gt;</span>
+                <span>Bergkley</span>
+            </a>
+
+            <nav class="site-nav" id="primary-navigation" aria-label="Navegação principal">
+                <a href="#home" class="active">Início</a>
+                <a href="#about">Sobre</a>
+                <a href="#services">Serviços</a>
+                <a href="#skill">Habilidades</a>
+                <a href="#portfolio">Projetos</a>
+                <a href="#trajectory">Experiência</a>
+                <a href="#contact">Contato</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema" aria-pressed="false">
+                    <i class="bx bx-moon" aria-hidden="true"></i>
+                </button>
+
+                <div class="language-picker">
+                    <button class="language-button" id="languageToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="languageMenu">
+                        <img src="image/brasil.png" alt="" class="flag-icon" width="20" height="15">
+                        <span>PT</span>
+                        <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="language-menu" id="languageMenu" hidden>
+                        <a href="index.html" aria-current="page"><img src="image/brasil.png" alt="" class="flag-icon" width="20" height="15"> Português</a>
+                        <a href="indexUs.html"><img src="image/estados-unidos.png" alt="" class="flag-icon" width="20" height="15"> English</a>
+                        <a href="indexEs.html"><img src="image/espanha.png" alt="" class="flag-icon" width="20" height="15"> Español</a>
+                    </div>
                 </div>
+
+                <button class="icon-button nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-controls="primary-navigation" aria-expanded="false">
+                    <i class="bx bx-menu" aria-hidden="true"></i>
+                </button>
             </div>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <button class="close-btn" id="close-btn"><i class='bx bx-exit'></i></button>
-        </nav>
+        </div>
     </header>
-    
-    
-  
-    
-    <section class="home" id="home">
-        <div class="home-content" id="animate-on-scroll">
-            <h3>Olá, me chamo👋</h3>
-            <h1>Bergkley Brasil</h1>
-            
-            <h3>E eu sou um
-            <span class="text"></span> </h3>
-            <hr color="blueviolet" style="margin-top: 10px;">
-           
-            
-            
-            <div style="margin-top: 50px;">
-                <a href="https://github.com/Bergkley" target="_blank" class="btn-box"><i class='bx bxl-github' style="color: blueviolet;"></i> GitHub</a>
-                <span style="margin: 0 10px;"></span> 
-                <a href="https://br.linkedin.com/in/bergkley-ferreira-brasil-008680245" target="_blank" class="btn-box"><i class='bx bxl-linkedin-square' style="color: blueviolet;" ></i> LinkedIn</a>
-            </div>          
-        </div>
-        <div  id="animate-on-scroll">
-            <img src="image/output-onlinegiftools.gif"  id="gif" alt="Descrição da GIF">
-        </div>
-        
-    </section>
 
+    <main id="main-content">
+        <section class="hero section-pad" id="home" aria-labelledby="hero-title">
+            <div class="hero__content reveal">
+                <p class="eyebrow">Olá, eu sou</p>
+                <h1 id="hero-title">Bergkley Ferreira Brasil</h1>
+                <p class="hero__role">Desenvolvedor <span class="text" aria-live="polite">Full Stack</span></p>
+                <p class="hero__description">
+                    Crio interfaces responsivas, APIs robustas e experiências digitais objetivas para transformar ideias em produtos funcionais, acessíveis e bem construídos.
+                </p>
 
-    <section class="about" id="about">
-        <div class="about-img"  id="animate-on-scroll">
-            <img src="image/photo perfil.png" alt="" class="about-photo"  id="animate-on-scroll">
-        </div>
-        <div class="about-text"  id="animate-on-scroll">
-            <h2  id="animate-on-scroll">Sobre <span  id="animate-on-scroll">Mim</span></h2>
-            <h4  id="animate-on-scroll">Full Stack Developer</h4>
-            <p  id="animate-on-scroll">Sou estudante de desenvolvimento full stack, apaixonado por explorar tanto as complexidades do Front-End quanto do Back-End. Estou sempre buscando aprender e aplicar novas tecnologias para criar soluções inovadoras e funcionais.</p>
-
-            <p  id="animate-on-scroll">     
-                No Front-End, tenho experiência sólida em HTML, CSS e JavaScript, onde busco não apenas criar interfaces intuitivas e visualmente atraentes, mas também garantir uma experiência de usuário excepcional.
-       
-                No Back-End, tenho me dedicado especialmente ao Node.js, desenvolvendo habilidades em construção de APIs robustas e sistemas escaláveis. Minha jornada no desenvolvimento também inclui experiência prática em bancos de dados como MySQL e MongoDB, e familiaridade com conceitos fundamentais de segurança e desempenho.
-            </p>
-            <p id="animate-on-scroll">
-                Estou sempre aberto a explorar novas linguagens e tecnologias, pois acredito na importância de expandir constantemente meu repertório para enfrentar novos desafios e manter-me atualizado no dinâmico campo do desenvolvimento de software.
-
-            </p>
-            <div class="tech-icons"  id="animate-on-scroll">
-                <div class="icon-wrapper">
-                    <i class='bx bxl-html5' style='color: #e34c26;'></i>
-                    <i class='bx bxl-css3' style='color: #1572b6;'></i>
-                    <i class='bx bxl-javascript' style='color: #f7df1e;'></i>
-                    <i class='bx bxl-react' style='color: #61dafb;'></i>
-                    <i class='bx bxl-nodejs' style='color: #68a063;'></i>
-                    <i class='bx bxl-typescript' style='color: #007acc;'></i>
-                    <i class='bx bxl-data' style='color: #336791;'></i>
-                    <i class='bx bxl-postgresql' style='color: #336791;'></i>
-                    <i class='bx bxl-mongodb' style='color: #4db33d;'></i>
-                    <i class='bx bxl-git' style='color: #f05032;'></i>
-                    <i class='bx bxl-github' style='color: #181717;'></i>
-                    <i class='bx bxl-gitlab' style='color: #fc6d26;'></i>
-                    <i class='bx bxl-java' style='color: #007396;'></i>
+                <div class="hero__actions" aria-label="Ações principais">
+                    <a href="#portfolio" class="button button--primary"><i class="bx bx-grid-alt" aria-hidden="true"></i> Ver Projetos</a>
+                    <a href="#contact" class="button button--secondary"><i class="bx bx-send" aria-hidden="true"></i> Entrar em Contato</a>
+                    <a href="#contact" class="button button--ghost" data-resume-cta><i class="bx bx-download" aria-hidden="true"></i> Baixar Currículo</a>
                 </div>
-            </div>
-            <div id="animate-on-scroll">
-                <a href="#" class="btn-box" id="btn-box-curriculo" style="margin-top: 50px;">Baixe meu Currículo </a>
-            </div>
-        </div>
-    </section>
 
-    <section id="trajectory">
-        <div class="trajectory" id="animate-on-scroll">
-            <h1 class="sub-title">Minha <span>Trajetoria</span></h1>
-        <div class="trajectory-header">
-            <div>🎓 Educação</div>
-            <div>🧰 Experiência</div>
-        </div>
-        <div class="timeline" id="trajectory">
-            <!-- Education Entry -->
-            <div class="timeline-item timeline-item-left">
-                <h3>Analise e Desenvolvimento de Sistemas</h3>
-                <p>Universidade Estácio de Sá</p>
-                <div class="date">📅 2024 - Presente</div>
-            </div>
-    
-            <!-- Experience Entry -->
-            <div class="timeline-item timeline-item-right">
-                <h3>Desenvolvedor Full Stack</h3>
-                <p> G4Flex</p>
-                <div class="date">📅 08/2023 - Presente</div>
-            </div>
-    
-            <!-- Education Entry -->
-            <div class="timeline-item timeline-item-left">
-                <h3>Ensino Médio</h3>
-                <p>Redes De Computadores</p>
-                <div class="date">📅 2021 - 2023</div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    
-
-    <section id="services" >
-        <div class="services"  id="animate-on-scroll">
-            <div class="container"  id="animate-on-scroll">
-                <h1 class="sub-title">Meus <span>Serviços</span></h1>
-                <div class="services-list">
+                <dl class="hero-stats" aria-label="Resumo profissional">
                     <div>
-                        <i class='bx bx-code' style='color:#00eeff'></i>
-                        <h2>DESENVOLVEDOR FRONT-END</h2>
-                        <p>Como desenvolvedor front-end, é fundamental transformar o design em uma interface interativa e funcional. Utilizo tecnologias como HTML, CSS ,JavaScript e React para criar experiências de usuário responsivas e acessíveis. Minha missão é garantir que cada elemento visual de um site ou aplicativo funcione de maneira eficiente e atraente.</p>
-                        
+                        <dt>10+</dt>
+                        <dd>Projetos</dd>
                     </div>
                     <div>
-                        <i class='bx bxs-component' style='color:#00eeff'></i>
-                        <h2>ANALISTA DE SISTEMAS</h2>
-                        <p>Como analista de sistemas, meu papel é analisar e desenvolver soluções tecnológicas que atendam às necessidades do negócio. Envolvo-me na modelagem de dados, análise de requisitos e design de sistemas, sempre buscando otimizar processos e garantir a eficiência dos sistemas implantados.</p>
+                        <dt>Full Stack</dt>
+                        <dd>Front-End e Back-End</dd>
                     </div>
                     <div>
-                        <i class='bx bx-server' style='color:#00eeff'></i>
-                        <h2>DESENVOLVEDOR BACK-END</h2>
-                        <p>Como desenvolvedor back-end, sou responsável pela lógica do servidor e pela integração de banco de dados. Utilizo frameworks como NodeJs para construir APIs robustas e seguras, garantindo que os dados fluam de maneira eficaz entre o servidor e o usuário final.</p>
-                    </div>                    
+                        <dt>2023+</dt>
+                        <dd>Prática em desenvolvimento</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="hero__visual reveal" aria-label="Foto de perfil de Bergkley Ferreira Brasil">
+                <figure class="profile-card">
+                    <img src="image/photo perfil.png" alt="Foto de Bergkley Ferreira Brasil" width="520" height="520" decoding="async" fetchpriority="high">
+                </figure>
+            </div>
+        </section>
+
+        <section class="about section-pad" id="about" aria-labelledby="about-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Sobre mim</p>
+                <h2 id="about-title">Desenvolvimento com foco em clareza, performance e evolução constante.</h2>
+            </div>
+
+            <div class="about__grid">
+                <div class="about__copy reveal">
+                    <p>
+                        Sou estudante de desenvolvimento full stack e atuo explorando tanto as camadas de interface quanto a lógica de servidor. Gosto de criar soluções funcionais, organizadas e fáceis de usar.
+                    </p>
+                    <p>
+                        No Front-End, trabalho com HTML, CSS, JavaScript e React para construir interfaces responsivas e acessíveis. No Back-End, venho aprofundando minha prática com Node.js, APIs, MySQL, PostgreSQL e MongoDB.
+                    </p>
+                    <p>
+                        Minha jornada é guiada por aprendizado contínuo, atenção a detalhes e vontade de transformar requisitos em experiências digitais consistentes.
+                    </p>
+                </div>
+
+                <div class="value-grid reveal" aria-label="Diferenciais profissionais">
+                    <article class="value-card">
+                        <i class="bx bx-layout" aria-hidden="true"></i>
+                        <h3>Interfaces objetivas</h3>
+                        <p>Layouts responsivos, legíveis e pensados para navegação simples.</p>
+                    </article>
+                    <article class="value-card">
+                        <i class="bx bx-server" aria-hidden="true"></i>
+                        <h3>APIs e dados</h3>
+                        <p>Back-ends com Node.js, persistência de dados e integração entre serviços.</p>
+                    </article>
+                    <article class="value-card">
+                        <i class="bx bx-brain" aria-hidden="true"></i>
+                        <h3>Aprendizado contínuo</h3>
+                        <p>Busca constante por novas tecnologias, boas práticas e código limpo.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
 
-   
-
-
-
-    <h1 class="sub-title" id="skill">Minhas <span>Habilidades</span></h1>
-<div class="heading1" id="animate-on-scroll">
-    <button class="filter-btn active" data-filter="all">TODOS</button>
-    <button class="filter-btn" data-filter="backend">BACK-END</button>
-    <button class="filter-btn" data-filter="frontend">FRONT-END</button>
-    <button class="filter-btn" data-filter="personal">HABILIDADE PESSOAL</button>
-</div>
-
-<section class="skills" id="skills">
-    <div class="skills-container" id="animate-on-scroll">
-        <!-- Front-End Skills -->
-        <div class="skills-card skill" data-category="frontend">
-            <h3>Front-End</h3>
-            <ul>
-                <li>
-                    <span class="icon"><i class='bx bxl-html5'></i></span>
-                    <span>HTML</span>
-                    <span class="level">Avançado</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bxl-css3'></i></span>
-                    <span>CSS</span>
-                    <span class="level">Avançado</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bxl-tailwind-css'></i></span>
-                    <span>Tailwind CSS</span>
-                    <span class="level">Básico</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bxl-javascript'></i></span>
-                    <span>JavaScript</span>
-                    <span class="level">Intermediário</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bxl-git'></i></span>
-                    <span>Git</span>
-                    <span class="level">Intermediário</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bxl-react'></i></span>
-                    <span>React</span>
-                    <span class="level">Intermediário</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Back-End Skills -->
-        <div class="skills-card skill" data-category="backend">
-            <h3>Back-End</h3>
-            <ul>
-                <li>
-                    <span class="icon"><i class='bx bx-bar-chart'></i></span>
-                    <span>MySQL</span>
-                    <span class="level">Intermediário</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bxl-postgresql'></i></span>
-                    <span>PostgreSQL</span>
-                    <span class="level">Intermediário</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bxl-mongodb'></i></span>
-                    <span>MongoDB</span>
-                    <span class="level">Intermediário</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bxl-nodejs'></i></span>
-                    <span>Node JS</span>
-                    <span class="level">Intermediário</span>
-                </li>
-               
-            </ul>
-        </div>
-
-        <!-- Personal Skills -->
-        <div class="skills-card skill" data-category="personal">
-            <h3>Habilidades Pessoais</h3>
-            <ul>
-                <li>
-                    <span class="icon"><i class='bx bx-user'></i></span>
-                    <span>Comunicação</span>
-                    <span class="level">Intermediário</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bx-brain'></i></span>
-                    <span>Resolução de Problemas</span>
-                    <span class="level">Intermediário</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bx-group'></i></span>
-                    <span>Trabalho em Equipe</span>
-                    <span class="level">Avançado</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bx-star'></i></span>
-                    <span>Criatividade</span>
-                    <span class="level">Intermediário</span>
-                </li>
-                <li>
-                    <span class="icon"><i class='bx bxs-group'></i></span>
-                    <span>Liderança</span>
-                    <span class="level">Avançado</span>
-                </li>
-                
-                <li>
-                    <span class="icon"><i class='bx bx-calendar'></i></span>
-                    <span>Organização</span>
-                    <span class="level">Intermediário</span>
-                </li>
-                
-            </ul>
-        </div>
-    </div>
-</section>
-
-    
-    
-    
-    
-    
-    <section  id="portfolio">
-        <div  id="animate-on-scroll">
-            <div class="main-text" id="project">
-                <h2>Meus <span>Projetos</span></h2>
-                <div id="portfolio-buttons" class="collapse-buttons">
-                    <button class="portfolio-filter-btn active" data-filter="all">TODOS</button>
-                    <button class="portfolio-filter-btn" data-filter="Back-End">BACK-END</button>
-                    <button class="portfolio-filter-btn" data-filter="Front-End">FRONT-END</button>
-                    <button class="portfolio-filter-btn" data-filter="backend&frontend" id="btn-backend-frontend">BACK-END & FRONT-END</button>
-                </div>
-                <!-- Projeto 1 -->
-                <div class="portfolio-content" id="animate-on-scroll">
-                    <div class="card" data-category="Front-End">
-                        <img src="image/Instituto ONG 1.png"  alt="Project 1">
-                        <hr>
-                        <p>PROJETO SOCIAL </p>
-                        <button class="show-details-btn" data-modal="modal1">Mais informações</button>
-                    </div>
-                     <!-- Projeto 2 -->
-                    <div class="card" data-category="Front-End" id="animate-on-scroll">
-                        <img src="image/Portfolio.png" alt="Project 2">
-                        <hr>
-                        <p>PORTFOLIO</p>
-                        <button class="show-details-btn" data-modal="modal2">Mais informações</button>
-                    </div>
-                    <!-- Projeto 3 -->
-
-                    <div class="card" data-category="backend&frontend" id="animate-on-scroll">
-                        <img src="image/projeto canil.png"  calt="Project 3">
-                        <hr>
-                        <p>PROJETO CANIL</p>
-                        <button class="show-details-btn" data-modal="modal3">Mais informações</button>
-                    </div>
-
-                    <!-- Projeto 4 -->
-
-                    <div class="card" data-category="backend&frontend" id="animate-on-scroll">
-                        <img src="image/projeto next store.png"  calt="Project 4">
-                        <hr>
-                        <p>PROJETO Next-Commerce</p>
-                        <button class="show-details-btn" data-modal="modal4">Mais informações</button>
-                    </div>
-
-                    <!-- Projeto 5 -->
-                    <div class="card" data-category="Front-End" id="animate-on-scroll">
-                        <img src="image/projeto filmes.png"   calt="Project 4">
-                        <hr>
-                        <p>PROJETO Filmes</p>
-                        <button class="show-details-btn" data-modal="modal5">Mais informações</button>
-                    </div>
-
-                    <!-- Projeto 6 -->
-                    <div class="card" data-category="Back-End" id="animate-on-scroll">
-                        <img src="image/API RESTful.jpg"   calt="Project 4">
-                        <hr>
-                        <p>PROJETO Api RestFul</p>
-                        <button class="show-details-btn" data-modal="modal6">Mais informações</button>
-                    </div>
-                    <!-- Projeto 7 -->
-                    <div class="card" data-category="Back-End" id="animate-on-scroll">
-                        <img src="image/API + Postgres.jpg"  calt="Project 7">
-                        <hr>
-                        <p>PROJETO CRUD + Postgres</p>
-                        <button class="show-details-btn" data-modal="modal7">Mais informações</button>
-                    </div>
-                    <!-- Projeto 8 -->
-                    <div class="card" data-category="Back-End" id="animate-on-scroll">
-                        <img src="image/node + typescript.png"  calt="Project 8">
-                        <hr>
-                        <p>PROJETO API CLIENTE</p>
-                        <button class="show-details-btn" data-modal="modal8">Mais informações</button>
-                    </div>
-                    <!-- Projeto 9 -->
-                    <div class="card" data-category="Back-End" id="animate-on-scroll">
-                        <img src="image/SISTEMA DE AUTENTICAÇÃO.png"  calt="Project 8">
-                        <hr>
-                        <p>PROJETO SISTEMA DE AUTENTICAÇÃO</p>
-                        <button class="show-details-btn" data-modal="modal9">Mais informações</button>
-                    </div>
-                    <!-- Projeto 10 -->
-                    <div class="card" data-category="Back-End" id="animate-on-scroll">
-                        <img src="image/SOLID + CLEAN ARCHITECTURE.png"   calt="Project 10">
-                        <hr>
-                        <p>PROJETO SOLID + CLEAN ARCHITECTURE</p>
-                        <button class="show-details-btn" data-modal="modal10">Mais informações</button>
-                    </div>
-
+            <div class="tech-marquee reveal" aria-label="Tecnologias que uso">
+                <div class="tech-marquee__content">
+                <ul class="tech-marquee__track">
+                    <li class="tech-marquee__item tech-marquee__item--html"><i class="bx bxl-html5" aria-hidden="true"></i><span class="sr-only">HTML5</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--css"><i class="bx bxl-css3" aria-hidden="true"></i><span class="sr-only">CSS3</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--javascript"><i class="bx bxl-javascript" aria-hidden="true"></i><span class="sr-only">JavaScript</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--react"><i class="bx bxl-react" aria-hidden="true"></i><span class="sr-only">React</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--node"><i class="bx bxl-nodejs" aria-hidden="true"></i><span class="sr-only">Node.js</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--typescript"><i class="bx bxl-typescript" aria-hidden="true"></i><span class="sr-only">TypeScript</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--postgres"><i class="bx bxl-postgresql" aria-hidden="true"></i><span class="sr-only">PostgreSQL</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--mongodb"><i class="bx bxl-mongodb" aria-hidden="true"></i><span class="sr-only">MongoDB</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--git"><i class="bx bxl-git" aria-hidden="true"></i><span class="sr-only">Git</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--github"><i class="bx bxl-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--gitlab"><i class="bx bxl-gitlab" aria-hidden="true"></i><span class="sr-only">GitLab</span></li>
+                    <li class="tech-marquee__item tech-marquee__item--java"><i class="bx bxl-java" aria-hidden="true"></i><span class="sr-only">Java</span></li>
+                </ul>
+                <ul class="tech-marquee__track" aria-hidden="true">
+                    <li class="tech-marquee__item tech-marquee__item--html"><i class="bx bxl-html5" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--css"><i class="bx bxl-css3" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--javascript"><i class="bx bxl-javascript" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--react"><i class="bx bxl-react" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--node"><i class="bx bxl-nodejs" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--typescript"><i class="bx bxl-typescript" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--postgres"><i class="bx bxl-postgresql" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--mongodb"><i class="bx bxl-mongodb" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--git"><i class="bx bxl-git" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--github"><i class="bx bxl-github" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--gitlab"><i class="bx bxl-gitlab" aria-hidden="true"></i></li>
+                    <li class="tech-marquee__item tech-marquee__item--java"><i class="bx bxl-java" aria-hidden="true"></i></li>
+                </ul>
                 </div>
             </div>
-        </div>
-        <button class="show-more-btn" id="showMoreButton">Mostrar mais projetos</button>
-    </section>
-    
+        </section>
 
-    <!-- Modal 1 -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>PROJETO SOCIAL</h2>
-            <img src="image/Instituto ONG.png"  alt="Project 1">
-            <a href="https://github.com/Bergkley/projeto-social---vers-o-BETA" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-            <hr class="small-hr">
-
-            <!-- Descrição -->
-            <h4>Descrição</h4>
-            <p>
-                O projeto social foi criado para o Instituto Doando o que se Recebe, desenvolvido pelos alunos da EEEP Juarez Távora, no curso de Redes de Computadores em 2023. O projeto consistiu na elaboração de um site para auxiliar a instituição a apresentar sua missão e atividades, além de oferecer canais de doação integrados ao site
-            </p>
-            <hr class="small-hr">
-            <h4>Tecnologias Utilizadas</h4>
-            <div class="tags">
-                <span class="tag html"><i class='bx bxl-html5'></i> HTML5</span>
-                <span class="tag css"><i class='bx bxl-css3'></i> CSS3</span>
-                <span class="tag javascript"><i class='bx bxl-javascript'></i> JavaScript</span>
+        <section class="services section-pad" id="services" aria-labelledby="services-title">
+            <div class="section-heading section-heading--center reveal">
+                <p class="eyebrow">Serviços</p>
+                <h2 id="services-title">O que posso entregar</h2>
             </div>
-            <hr class="small-hr">
-            <a href="https://instituto-doando-que-se-recebe.netlify.app/" target="_blank" class="btn-box-modal">Acessar Projeto <i class='bx bx-link-external'></i></a>
-        </div>
-    </div>
-    
 
-<!-- Modal 2 -->
-<div id="modal2" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>PORTFOLIO</h2>
-        <img src="image/Portfolio.png"  alt="Project 2">
-        <hr class="small-hr">
-
-        <!-- Descrição -->
-        <h4>Descrição</h4>
-        <p>
-            Criação do próprio portfólio: desenvolvimento de um espaço digital estruturado e dinâmico para apresentação de projetos pessoais e profissionais, destacando habilidades técnicas e criativas em design e desenvolvimento web. Implementação de seções detalhadas para serviços oferecidos, competências técnicas e pessoais. 
-        </p>
-
-        <hr class="small-hr">
-        <h4>Tecnologias Utilizadas</h4>
-        <div class="tags">
-            <span class="tag html"><i class='bx bxl-html5'></i> HTML5</span>
-            <span class="tag css"><i class='bx bxl-css3'></i> CSS3</span>
-            <span class="tag javascript"><i class='bx bxl-javascript'></i> JavaScript</span>
-            <hr class="small-hr">
-            <a href="https://portfolio-bergkley.netlify.app/" target="_blank" class="btn-box-modal">Acessar Projeto <i class='bx bx-link-external'></i></a>
-            <a href="https://github.com/Bergkley/PORTFOLIO-BERGKLEY" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 3 -->
-<div id="modal3" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>PROJETO CANIL</h2>
-        <img src="image/projeto canil.png"   alt="Project 3">
-        <a href="https://github.com/Bergkley/CURSOS/tree/master/B7WEB/NodeJs/M%C3%B3dulo%202" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-        <hr class="small-hr">
-
-        <!-- Descrição -->
-        <h4>Descrição</h4>
-        <p style="text-align: justify; text-align-last: center;">
-            O projeto do canil foi desenvolvido através do curso da B7web, proporcionando uma oportunidade prática para a aprendizagem de Node.js, TypeScript, HTML e CSS. Este projeto permite aplicar diretamente os conhecimentos adquiridos no curso, explorando técnicas avançadas de desenvolvimento web e reforçando habilidades essenciais na criação e manutenção de aplicações modernas.
-        </p>
-        
-
-        <hr class="small-hr">
-        <h4>Tecnologias Utilizadas</h4>
-        <div class="tags">
-            <span class="tag html"><i class='bx bxl-html5'></i> HTML5</span>
-            <span class="tag css"><i class='bx bxl-css3'></i> CSS3</span>
-            <span class="tag javascript"><i class='bx bxl-javascript'></i> JavaScript</span>
-            <span class="tag nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
-            <span class="tag typescript"><i class='bx bxl-typescript'></i> TypeScript</span>
-        </div>
-
-        <hr class="small-hr">
-
-    </div>
-</div>
-
-<!-- Modal 4 -->
-<div id="modal4" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>PROJETO NEXT-COMMERCE</h2>
-        <img src="image/projeto next store.png"   alt="Project 4">
-        <a href="https://github.com/Bergkley/Next---Commerce" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-        <hr class="small-hr">
-
-        <!-- Descrição -->
-        <h4>Descrição</h4>
-        <p style="text-align: justify; text-align-last: center;">
-            Este projeto foi criado com o objetivo de aprender e aplicar na prática os conceitos de Next.js com React, Prisma, Tailwind, Clerk, TypeScript e Vercel Postgres.O projeto envolve a criação de loja comercial.
-        </p>
-        
-
-        <hr class="small-hr">
-        <h4 >Tecnologias Utilizadas</h4>
-        <div class="tags">
-            <span class="tag typescript"><i class='bx bxl-typescript'></i> TypeScript</span>
-            <span class="tag react"><i class='bx bxl-react'></i> React</span>            
-        </div>
-
-        <hr class="small-hr">
-            <a href="https://next-commerce-berg.netlify.app/" target="_blank "class="btn-box-modal">Acessar Projeto <i class='bx bx-link-external'></i></a>
-
-    </div>
-</div>
-
-<!-- Modal 5 -->
-<div id="modal5" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>PROJETO FILMES</h2>
-        <img src="image/projeto filmes.png"   alt="Project 5">
-        <a href="https://github.com/Bergkley/Projeto-Filmes" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-        <hr class="small-hr">
-
-        <!-- Descrição -->
-        <h4 >Descrição</h4>
-        <p>
-            Este projeto tem como objetivo consumir a API do The Movie Database (TMDb) para criar uma aplicação web dinâmica e interativa que permita aos usuários explorar informações sobre filmes. Utilizando React.
-        </p>
-        
-
-        <hr class="small-hr">
-        <h4>Tecnologias Utilizadas</h4>
-        <div class="tags">
-            <span class="tag react"><i class='bx bxl-react'></i> React</span>            
-        </div>
-
-        <hr class="small-hr">
-            <a href="https://projetos-filmes-bergkley.netlify.app/" target="_blank "class="btn-box-modal">Acessar Projeto <i class='bx bx-link-external'></i></a>
-
-    </div>
-</div>
-<!-- Modal 6 -->
-<div id="modal6" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>PROJETO API RESTFUL</h2>
-        <img src="image/API RESTful.jpg"   alt="Project 5">
-        <a href="https://github.com/Bergkley/BACK-END/tree/master/Projeto%205%20-%20API%20RESTFUL" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-        <hr class="small-hr">
-
-        <!-- Descrição -->
-        <h4>Descrição</h4>
-        <p style="text-align: justify; text-align-last: center;">
-            Este projeto tem como objetivo de realizar CRUD utilizando Node Js, MongoDB
-        </p>
-        
-
-        <hr class="small-hr">
-        <h4>Tecnologias Utilizadas</h4>
-        <div class="tags">
-            <span class="tag nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
-            <span class="tag mongodb"><i class='bx bxl-mongodb'></i> MongoDB</span>         
-        </div>
-
-    </div>
-</div>
-<!-- Modal 7 -->
-<div id="modal7" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>PROJETO CRUD + POSTGRES</h2>
-        <img src="image/API + Postgres.jpg"   alt="Project 5">
-        <a href="https://github.com/Bergkley/BACK-END/tree/master/Projeto%203%20-%20CRUD" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-        <hr class="small-hr">
-
-        <!-- Descrição -->
-        <h4>Descrição</h4>
-        <p style="text-align: justify; text-align-last: center;">
-            Este projeto tem como objetivo criar CRUD Utilizando Node.JS, Express, TypeORM e PostgreSQL
-        </p>
-        
-
-        <hr class="small-hr">
-        <h4>Tecnologias Utilizadas</h4>
-        <div class="tags">
-            <span class="tag nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
-            <span class="tag postgresql"><i class='bx bxl-postgresql'></i> PostgreSQL</span>
-        </div>
-
-    </div>
-</div>
-<!-- Modal 8 -->
-<div id="modal8" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>PROJETO API CLIENTE</h2>
-        <img src="image/node + typescript.png"   alt="Project 5">
-        <a href="https://github.com/Bergkley/BACK-END/tree/master/Projeto%204%20-%20API%20%20CLIENT%20BACK%20END" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-        <hr class="small-hr">
-
-        <!-- Descrição -->
-        <h4>Descrição</h4>
-        <p style="text-align: justify; text-align-last: center;">
-            Este projeto tem como objetivo realizar o back end para cadastrar cliente usando Node Js, Prisma, MongoDB e TypeScript.
-        </p>
-        
-
-        <hr class="small-hr">
-        <h4>Tecnologias Utilizadas</h4>
-        <div class="tags">
-            <span class="tag nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
-            <span class="tag mongodb"><i class='bx bxl-mongodb'></i> MongoDB</span>         
-        </div>
-
-    </div>
-</div>
-<!-- Modal 9 -->
-<div id="modal9" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>PROJETO SISTEMA DE AUTENTICAÇÃO</h2>
-        <img src="image/SISTEMA DE AUTENTICAÇÃO.png"   alt="Project 5">
-        <a href="https://github.com/Bergkley/BACK-END/tree/master/Projeto%201%20-%20Sistema%20de%20autentica%C3%A7%C3%A3o%20(%20simples)" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-        <hr class="small-hr">
-
-        <!-- Descrição -->
-        <h4>Descrição</h4>
-        <p style="text-align: justify; text-align-last: center;">
-            Este projeto tem como objetivo realizar o back end para criar uma autenticação usando Node Js.
-        </p>
-        
-
-        <hr class="small-hr">
-        <h4>Tecnologias Utilizadas</h4>
-        <div class="tags">
-            <span class="tag nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
-        </div>
-
-    </div>
-</div>
-<!-- Modal 10 -->
-<div id="modal10" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>PROJETO PROJETO SOLID + CLEAN ARCHITECTURE</h2>
-        <img src="image/SOLID + CLEAN ARCHITECTURE.png"   alt="Project 5">
-        <a href="https://github.com/Bergkley/BACK-END/tree/master/Projeto%202%20-%20SOLID%20%2B%20Clean%20Architecture" target="_blank" class="btn-box-modal"><i class='bx bxl-github' style="color: blueviolet;"></i> Código Fonte</a>
-        <hr class="small-hr">
-
-        <!-- Descrição -->
-        <h4>Descrição</h4>
-        <p>
-            Este projeto foi criado com o objetivo de aprender e aplicar na prática os conceitos de SOLID e Clean Architecture. A ideia é construir uma loja virtual onde é possível criar e listar todos os produtos.
-        </p>
-        
-
-        <hr class="small-hr">
-        <h4>Tecnologias Utilizadas</h4>
-        <div class="tags">
-            <span class="tag nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
-            <span class="tag typescript"><i class='bx bxl-typescript'></i> TypeScript</span>
-        </div>
-
-    </div>
-</div>
-
-    
-
-
-    <section class="contact" id="contact">
-        <div class="contact-text" id="animate-on-scroll">
-            <h2>Contate <span>Me</span></h2>
-            <div class="contact-list">
-                <li><i class='bx bxs-send'></i>bergkley@gmail.com</li>
-                <li><i class='bx bxs-phone'></i>+55(85) 98644-2147</li>
+            <div class="card-grid">
+                <article class="service-card reveal">
+                    <i class="bx bx-code-alt" aria-hidden="true"></i>
+                    <h3>Front-End</h3>
+                    <p>Transformo layouts em interfaces responsivas, acessíveis e bem estruturadas com HTML, CSS, JavaScript e React.</p>
+                </article>
+                <article class="service-card reveal">
+                    <i class="bx bx-git-branch" aria-hidden="true"></i>
+                    <h3>Análise de Sistemas</h3>
+                    <p>Organizo requisitos, modelo fluxos e proponho soluções que conectam necessidades de negócio a tecnologia.</p>
+                </article>
+                <article class="service-card reveal">
+                    <i class="bx bx-data" aria-hidden="true"></i>
+                    <h3>Back-End</h3>
+                    <p>Desenvolvo APIs, regras de negócio e integrações com bancos de dados usando Node.js e ferramentas modernas.</p>
+                </article>
             </div>
-            <div class="contact-icons">
-                <a href="https://github.com/Bergkley" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/bergkley?igsh=MWk2ZTE4a2FyeTczZA%3D%3D" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href="https://br.linkedin.com/in/bergkley-ferreira-brasil-008680245" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        </section>
+
+        <section class="skills-section section-pad" id="skill" aria-labelledby="skills-title">
+            <div class="section-heading section-heading--center reveal">
+                <p class="eyebrow">Habilidades</p>
+                <h2 id="skills-title">Competências técnicas e comportamentais</h2>
             </div>
-        </div>
 
+            <div class="filter-bar reveal" role="group" aria-label="Filtrar habilidades">
+                <button class="filter-btn skill-filter active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+                <button class="filter-btn skill-filter" type="button" data-filter="frontend" aria-pressed="false">Front-End</button>
+                <button class="filter-btn skill-filter" type="button" data-filter="backend" aria-pressed="false">Back-End</button>
+                <button class="filter-btn skill-filter" type="button" data-filter="personal" aria-pressed="false">Pessoais</button>
+            </div>
 
-        <div class="contact-form"  id="animate-on-scroll">
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Digite seu nome" required>
-                <input type="email" name="email" placeholder="Digite seu e-mail" required>
-                <input type="text" name="_subject" placeholder="Digite seu assunto">
-                <textarea name="message" cols="40" rows="10" placeholder="Digite sua mensagem" required></textarea>
+            <div class="skills-grid">
+                <article class="skill-card reveal" data-category="frontend">
+                    <h3><i class="bx bx-code-curly" aria-hidden="true"></i> Front-End</h3>
+                    <ul class="skill-list">
+                        <li><i class="bx bxl-html5" aria-hidden="true"></i><span>HTML</span><strong>Avançado</strong></li>
+                        <li><i class="bx bxl-css3" aria-hidden="true"></i><span>CSS</span><strong>Avançado</strong></li>
+                        <li><i class="bx bxl-tailwind-css" aria-hidden="true"></i><span>Tailwind CSS</span><strong>Básico</strong></li>
+                        <li><i class="bx bxl-javascript" aria-hidden="true"></i><span>JavaScript</span><strong>Intermediário</strong></li>
+                        <li><i class="bx bxl-git" aria-hidden="true"></i><span>Git</span><strong>Intermediário</strong></li>
+                        <li><i class="bx bxl-react" aria-hidden="true"></i><span>React</span><strong>Intermediário</strong></li>
+                    </ul>
+                </article>
+
+                <article class="skill-card reveal" data-category="backend">
+                    <h3><i class="bx bx-server" aria-hidden="true"></i> Back-End</h3>
+                    <ul class="skill-list">
+                        <li><i class="bx bx-data" aria-hidden="true"></i><span>MySQL</span><strong>Intermediário</strong></li>
+                        <li><i class="bx bxl-postgresql" aria-hidden="true"></i><span>PostgreSQL</span><strong>Intermediário</strong></li>
+                        <li><i class="bx bxl-mongodb" aria-hidden="true"></i><span>MongoDB</span><strong>Intermediário</strong></li>
+                        <li><i class="bx bxl-nodejs" aria-hidden="true"></i><span>Node.js</span><strong>Intermediário</strong></li>
+                    </ul>
+                </article>
+
+                <article class="skill-card reveal" data-category="personal">
+                    <h3><i class="bx bx-user-voice" aria-hidden="true"></i> Habilidades Pessoais</h3>
+                    <ul class="skill-list">
+                        <li><i class="bx bx-message-rounded-dots" aria-hidden="true"></i><span>Comunicação</span><strong>Intermediário</strong></li>
+                        <li><i class="bx bx-bulb" aria-hidden="true"></i><span>Resolução de Problemas</span><strong>Intermediário</strong></li>
+                        <li><i class="bx bx-group" aria-hidden="true"></i><span>Trabalho em Equipe</span><strong>Avançado</strong></li>
+                        <li><i class="bx bx-star" aria-hidden="true"></i><span>Criatividade</span><strong>Intermediário</strong></li>
+                        <li><i class="bx bx-target-lock" aria-hidden="true"></i><span>Liderança</span><strong>Avançado</strong></li>
+                        <li><i class="bx bx-calendar-check" aria-hidden="true"></i><span>Organização</span><strong>Intermediário</strong></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="portfolio section-pad" id="portfolio" aria-labelledby="portfolio-title">
+            <div class="section-heading section-heading--split reveal">
+                <div>
+                    <p class="eyebrow">Projetos em destaque</p>
+                    <h2 id="portfolio-title">Soluções que mostram prática real</h2>
+                </div>
+                <p>Uma seleção de projetos front-end, back-end e full stack com links para código, demonstrações e detalhes técnicos.</p>
+            </div>
+
+            <div class="filter-bar reveal" role="group" aria-label="Filtrar projetos">
+                <button class="filter-btn portfolio-filter-btn active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+                <button class="filter-btn portfolio-filter-btn" type="button" data-filter="frontend" aria-pressed="false">Front-End</button>
+                <button class="filter-btn portfolio-filter-btn" type="button" data-filter="backend" aria-pressed="false">Back-End</button>
+                <button class="filter-btn portfolio-filter-btn" type="button" data-filter="fullstack" aria-pressed="false">Full Stack</button>
+            </div>
+
+            <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+            <button class="button button--secondary show-more-btn" id="showMoreButton" type="button">Mostrar mais projetos</button>
+        </section>
+
+        <section class="experience section-pad" id="trajectory" aria-labelledby="experience-title">
+            <div class="section-heading section-heading--center reveal">
+                <p class="eyebrow">Experiência</p>
+                <h2 id="experience-title">Trajetória acadêmica e profissional</h2>
+            </div>
+
+            <ol class="timeline reveal">
+                <li class="timeline-item">
+                    <span class="timeline-item__type">Educação</span>
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    <p>Universidade Estácio de Sá</p>
+                    <time datetime="2024">2024 - Presente</time>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-item__type">Experiência</span>
+                    <h3>Desenvolvedor Full Stack</h3>
+                    <p>G4Flex</p>
+                    <time datetime="2023-08">08/2023 - Presente</time>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-item__type">Educação</span>
+                    <h3>Ensino Médio Técnico</h3>
+                    <p>Redes de Computadores</p>
+                    <time datetime="2021">2021 - 2023</time>
+                </li>
+            </ol>
+        </section>
+
+        <section class="technologies section-pad" aria-labelledby="technologies-title">
+            <div class="section-heading section-heading--center reveal">
+                <p class="eyebrow">Tecnologias</p>
+                <h2 id="technologies-title">Ferramentas que uso para construir</h2>
+            </div>
+
+            <ul class="tech-grid reveal" aria-label="Lista de tecnologias">
+                <li><i class="bx bxl-html5" aria-hidden="true"></i><span>HTML5</span></li>
+                <li><i class="bx bxl-css3" aria-hidden="true"></i><span>CSS3</span></li>
+                <li><i class="bx bxl-javascript" aria-hidden="true"></i><span>JavaScript</span></li>
+                <li><i class="bx bxl-typescript" aria-hidden="true"></i><span>TypeScript</span></li>
+                <li><i class="bx bxl-react" aria-hidden="true"></i><span>React</span></li>
+                <li><i class="bx bxl-nodejs" aria-hidden="true"></i><span>Node.js</span></li>
+                <li><i class="bx bxl-postgresql" aria-hidden="true"></i><span>PostgreSQL</span></li>
+                <li><i class="bx bxl-mongodb" aria-hidden="true"></i><span>MongoDB</span></li>
+                <li><i class="bx bxl-git" aria-hidden="true"></i><span>Git</span></li>
+                <li><i class="bx bxl-github" aria-hidden="true"></i><span>GitHub</span></li>
+            </ul>
+        </section>
+
+        <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+            <div class="contact__content reveal">
+                <p class="eyebrow">Contato</p>
+                <h2 id="contact-title">Vamos construir algo bem feito?</h2>
+                <p>Estou aberto a oportunidades, colaborações e conversas sobre desenvolvimento web.</p>
+
+                <address class="contact-list">
+                    <a href="mailto:bergkley@gmail.com"><i class="bx bx-envelope" aria-hidden="true"></i> bergkley@gmail.com</a>
+                    <a href="tel:+5585986442147"><i class="bx bx-phone" aria-hidden="true"></i> +55 (85) 98644-2147</a>
+                </address>
+
+                <div class="social-links" aria-label="Redes sociais">
+                    <a href="https://github.com/Bergkley" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Bergkley"><i class="bx bxl-github" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/bergkley?igsh=MWk2ZTE4a2FyeTczZA%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Bergkley"><i class="bx bxl-instagram" aria-hidden="true"></i></a>
+                    <a href="https://br.linkedin.com/in/bergkley-ferreira-brasil-008680245" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Bergkley"><i class="bx bxl-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/ajax/bergkley@gmail.com" method="POST">
+                <div class="form-field">
+                    <label for="name">Nome</label>
+                    <input id="name" type="text" name="name" placeholder="Seu nome" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="subject">Assunto</label>
+                    <input id="subject" type="text" name="_subject" placeholder="Como posso ajudar?">
+                </div>
+                <div class="form-field">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Conte um pouco sobre o projeto ou oportunidade" required></textarea>
+                </div>
                 <input type="hidden" name="_captcha" value="false">
-                <input type="submit" value="enviar" class="send">
+                <button class="button button--primary" type="submit"><i class="bx bx-send" aria-hidden="true"></i> Enviar Mensagem</button>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
             </form>
-        </div>
-        <div id="loadingMessage" class="modalsucess">
-            <div class="modal-content-sucess">
-                <p style="color: #181717;">Enviando e-mail...</p>
-                <div class="loader-container">
-                    <div class="loader"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Bergkley Ferreira Brasil. Todos os direitos reservados.</p>
+        <a href="#home" class="back-to-top" aria-label="Voltar ao topo"><i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
+    </footer>
+
+    <template id="project-card-template">
+        <article class="project-card reveal">
+            <a class="project-card__media" target="_blank" rel="noopener noreferrer">
+                <img src="" alt="" width="640" height="420" loading="lazy" decoding="async">
+            </a>
+            <div class="project-card__body">
+                <span class="project-card__category"></span>
+                <h3></h3>
+                <p></p>
+                <ul class="tag-list" aria-label="Tecnologias do projeto"></ul>
+                <div class="project-card__actions">
+                    <button class="button button--ghost show-details-btn" type="button">Detalhes</button>
+                    <a class="button button--secondary project-card__demo" target="_blank" rel="noopener noreferrer">Ver online</a>
                 </div>
             </div>
-        </div>
-        <div id="successMessage" class="modalsucess">
-            <div class="modal-content-sucess">
-                <span class="close-button">&times;</span>
-                <p>E-mail enviado com sucesso!</p>
-            </div>
-        </div>
-        <div id="errorMessage" class="modalsucess">
-            <div class="modal-content-sucess">
-                <span class="close-button">&times;</span>
-                <p style="color: red;">Falha ao enviar e-mail. Por favor, tente novamente mais tarde.</p>
-            </div>
-        </div>
-        
-    </section>
-    <div class="last-text"  id="animate-on-scroll">
-        <p>&#169
-            Bergkley Ferreira Brasil
-            2024 todos os direitos reservados
-        </p>
-    </div>
-    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+        </article>
+    </template>
 
-    
+    <div class="modal" id="projectModal" hidden>
+        <div class="modal__backdrop" data-close-modal></div>
+        <article class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+            <button class="icon-button modal__close" type="button" data-close-modal aria-label="Fechar detalhes do projeto">
+                <i class="bx bx-x" aria-hidden="true"></i>
+            </button>
+            <img class="modal__image" id="modalImage" src="" alt="" width="720" height="420" loading="lazy" decoding="async">
+            <span class="project-card__category" id="modalCategory"></span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <ul class="tag-list" id="modalTags" aria-label="Tecnologias utilizadas"></ul>
+            <div class="modal__actions" id="modalActions"></div>
+        </article>
+    </div>
+
     <script src="main.js"></script>
-    
 </body>
 </html>
