@@ -12,9 +12,11 @@
     <meta property="og:image" content="image/Portfolio.png">
     <title>Bergkley Ferreira Brasil | Full Stack Developer</title>
     <link rel="icon" href="image/Logo.png" type="image/png">
+    <link rel="preload" as="image" href="image/photo-perfil-780.jpg" imagesrcset="image/photo-perfil-520.jpg 520w, image/photo-perfil-780.jpg 780w" imagesizes="(max-width: 720px) 82vw, 420px">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+    <noscript><link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"></noscript>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -42,15 +44,15 @@
                 </button>
 
                 <div class="language-picker">
-                    <button class="language-button" id="languageToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="languageMenu">
-                        <img src="image/estados-unidos.png" alt="" class="flag-icon" width="20" height="15">
+                    <button class="language-button" id="languageToggle" type="button" aria-label="Select language" aria-haspopup="true" aria-expanded="false" aria-controls="languageMenu">
+                        <img src="image/flag-estados-unidos-40.png" alt="" class="flag-icon" width="20" height="15">
                         <span>EN</span>
                         <i class="bx bx-chevron-down" aria-hidden="true"></i>
                     </button>
                     <div class="language-menu" id="languageMenu" hidden>
-                        <a href="index.html"><img src="image/brasil.png" alt="" class="flag-icon" width="20" height="15"> Português</a>
-                        <a href="indexUs.html" aria-current="page"><img src="image/estados-unidos.png" alt="" class="flag-icon" width="20" height="15"> English</a>
-                        <a href="indexEs.html"><img src="image/espanha.png" alt="" class="flag-icon" width="20" height="15"> Español</a>
+                        <a href="index.html"><img src="image/flag-brasil-40.png" alt="" class="flag-icon" width="20" height="15"> Português</a>
+                        <a href="indexUs.html" aria-current="page"><img src="image/flag-estados-unidos-40.png" alt="" class="flag-icon" width="20" height="15"> English</a>
+                        <a href="indexEs.html"><img src="image/flag-espanha-40.png" alt="" class="flag-icon" width="20" height="15"> Español</a>
                     </div>
                 </div>
 
@@ -95,7 +97,7 @@
 
             <div class="hero__visual reveal" aria-label="Profile photo of Bergkley Ferreira Brasil">
                 <figure class="profile-card">
-                    <img src="image/photo perfil.png" alt="Photo of Bergkley Ferreira Brasil" width="520" height="520" decoding="async" fetchpriority="high">
+                    <img src="image/photo-perfil-520.jpg" srcset="image/photo-perfil-520.jpg 520w, image/photo-perfil-780.jpg 780w" sizes="(max-width: 720px) 82vw, 420px" alt="Photo of Bergkley Ferreira Brasil" width="520" height="520" decoding="async" fetchpriority="high">
                 </figure>
             </div>
         </section>

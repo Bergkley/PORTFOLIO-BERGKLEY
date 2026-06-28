@@ -12,9 +12,11 @@
     <meta property="og:image" content="image/Portfolio.png">
     <title>Bergkley Ferreira Brasil | Desarrollador Full Stack</title>
     <link rel="icon" href="image/Logo.png" type="image/png">
+    <link rel="preload" as="image" href="image/photo-perfil-780.jpg" imagesrcset="image/photo-perfil-520.jpg 520w, image/photo-perfil-780.jpg 780w" imagesizes="(max-width: 720px) 82vw, 420px">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+    <noscript><link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"></noscript>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Ir al contenido principal</a>
@@ -37,20 +39,20 @@
             </nav>
 
             <div class="header-actions">
-                <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema" aria-pressed="false">
+                <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
                     <i class="bx bx-moon" aria-hidden="true"></i>
                 </button>
 
                 <div class="language-picker">
-                    <button class="language-button" id="languageToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="languageMenu">
-                        <img src="image/espanha.png" alt="" class="flag-icon" width="20" height="15">
+                    <button class="language-button" id="languageToggle" type="button" aria-label="Seleccionar idioma" aria-haspopup="true" aria-expanded="false" aria-controls="languageMenu">
+                        <img src="image/flag-espanha-40.png" alt="" class="flag-icon" width="20" height="15">
                         <span>ES</span>
                         <i class="bx bx-chevron-down" aria-hidden="true"></i>
                     </button>
                     <div class="language-menu" id="languageMenu" hidden>
-                        <a href="index.html"><img src="image/brasil.png" alt="" class="flag-icon" width="20" height="15"> Português</a>
-                        <a href="indexUs.html"><img src="image/estados-unidos.png" alt="" class="flag-icon" width="20" height="15"> English</a>
-                        <a href="indexEs.html" aria-current="page"><img src="image/espanha.png" alt="" class="flag-icon" width="20" height="15"> Español</a>
+                        <a href="index.html"><img src="image/flag-brasil-40.png" alt="" class="flag-icon" width="20" height="15"> Português</a>
+                        <a href="indexUs.html"><img src="image/flag-estados-unidos-40.png" alt="" class="flag-icon" width="20" height="15"> English</a>
+                        <a href="indexEs.html" aria-current="page"><img src="image/flag-espanha-40.png" alt="" class="flag-icon" width="20" height="15"> Español</a>
                     </div>
                 </div>
 
@@ -95,7 +97,7 @@
 
             <div class="hero__visual reveal" aria-label="Foto de perfil de Bergkley Ferreira Brasil">
                 <figure class="profile-card">
-                    <img src="image/photo perfil.png" alt="Foto de Bergkley Ferreira Brasil" width="520" height="520" decoding="async" fetchpriority="high">
+                    <img src="image/photo-perfil-520.jpg" srcset="image/photo-perfil-520.jpg 520w, image/photo-perfil-780.jpg 780w" sizes="(max-width: 720px) 82vw, 420px" alt="Foto de Bergkley Ferreira Brasil" width="520" height="520" decoding="async" fetchpriority="high">
                 </figure>
             </div>
         </section>

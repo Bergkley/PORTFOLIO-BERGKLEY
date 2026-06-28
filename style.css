@@ -712,7 +712,8 @@ html[data-theme="light"] .contact-form {
 .project-card,
 .skill-card,
 .value-card {
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition: transform 180ms ease, border-color 180ms ease;
+  will-change: transform;
 }
 
 .service-card:hover,
@@ -721,7 +722,6 @@ html[data-theme="light"] .contact-form {
 .value-card:hover {
   transform: translateY(-4px);
   border-color: rgba(139, 92, 246, 0.45);
-  box-shadow: var(--shadow-md);
 }
 
 .filter-bar {
@@ -1068,7 +1068,7 @@ html[data-theme="light"] .tag-list li {
   background: var(--bg-elevated);
   color: var(--text);
   padding: 0.85rem 0.95rem;
-  transition: border-color 180ms ease, box-shadow 180ms ease;
+  transition: border-color 180ms ease;
 }
 
 .form-field input::placeholder,
